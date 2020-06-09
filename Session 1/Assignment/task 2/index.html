@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Task one</title>
+        <style>
+            body {
+                font-family: cursive, arial;
+            }
+            form > fieldset {
+                background-color: #D5E5F2;
+            }
+            form > fieldset > fieldset {
+                background-color: #94CEF2;
+            }
+            fieldset legend {
+                background-color: #049DD9;
+                padding: 10px;
+                color: #D5E5F2;
+            }
+            fieldset table {
+                border-collapse: collapse;
+            }
+            fieldset table tr td {
+                padding: 0;
+                border-spacing: 0;
+            }
+            fieldset table tr td input {
+                padding: 5px;
+            }
+            fieldset select {
+                display: block;
+                width: 150px;
+                padding: 3px;
+            }
+            fieldset button {
+                display: block;
+                width: 100px;
+                background: linear-gradient(to top, #D5E5F2, #94CEF2);
+                border: 1px solid #94CEF2;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Personal Data</legend>
+
+                <br>
+                <!-- Basic info -->
+                <fieldset>
+                    <legend>
+                        Your Name
+                    </legend>
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label for="fname">First name</label></td>
+                                <td> : <input type="text" id="fname" name="fname" placeholder="ex Mustafa"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="sname">Second name</label></td>
+                                <td>: <input type="text" id="sname" name="sname" placeholder="ex Shaaban"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+
+                <br><br><br>
+
+                <!-- Additional information -->
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="phone">Your phone</label></td>
+                            <td>: <input type="text" id="phone" name="phone" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td>: <input type="email" id="email" name="email" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pass1">Password</label></td>
+                            <td>: <input type="password" id="pass1" name="pass1" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pass2">Re-password</label></td>
+                            <td>: <input type="password" id="pass2" name="pass2" placeholder=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br>
+
+                <!-- gender -->
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><input type="radio" id="male" name="gender" value="male"></td>
+                            <td><label for="male">Male</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="female" name="gender" value="female"></td>
+                            <td><label for="female">Female</label></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br>
+
+                <!-- Grade -->
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" id="student" name="grade[]" value="student"></td>
+                            <td><label for="student">Student</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="graduated" name="grade[]" value="graduated"></td>
+                            <td><label for="graduated">Graduated</label></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br>
+
+                <!-- Education -->
+                <select name="university">
+                    <option value="auc">AUC</option>
+                    <option value="buc">BUC</option>
+                    <option value="auc">AUC</option>
+                </select>
+
+                <button type="submit">Submit</button>
+
+            </fieldset>
+        </form>
+    </body>
+</html>
