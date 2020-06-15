@@ -1,0 +1,102 @@
+/* ======== Globals ======== */
+
+* {margin: 0; box-sizing: border-box; transition: .3s all ease-in-out;}
+
+h1 {font-family: 'Alegreya', serif;}
+
+h2, h3, h4, h5, h6, p, a {font-family: 'Alegreya Sans', sans-serif;color: #686868;}
+
+p {font-size: 17px;line-height: 1.86em;}
+
+h1 {font-size: 76px;}
+
+h2 {font-size: 32px;}
+
+h3 {font-size: 30px;}
+
+h4 {font-size: 22px;}
+
+a {text-decoration: none;}
+
+a:hover {color: #8e7754;}
+
+.container {width: 1170px;margin: 0 auto; padding: 0 15px;}
+
+.text-center {text-align: center;}
+
+.w-25 {width: 25%; padding: 10px;}
+
+.w-30 {width: 33.33333333333333%; padding: 10px;}
+
+.w-50 {width: 50%; padding: 10px;}
+
+.w-75 {width: 75%; padding: 10px;}
+
+.w-100 {width: 100%;}
+
+.fl-container {overflow: auto;box-sizing: border-box;}
+
+.fl-left {float: left;}
+
+.fl-right {float: right;}
+
+.clr {clear: both;}
+
+.section-padding {padding: 90px 0 60px 0;}
+
+.ul-reset {list-style: none;padding: 0;}
+
+.bg-brown-dark {background-color: #353330;}
+
+.bg-brown-light {background-color: #403d38;}
+
+.bg-brown-lighter {background-color: #8e7754;}
+
+.bg-gray {background-color: #f8f8f8;}
+
+.icon-brown {color: #8e7754}
+
+.btn {
+    display: inline-block;
+    font-family: 'Alegreya Sans', sans-serif;
+    background-color: transparent;
+    outline: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 15px 28px;
+    font-size: 16px;
+    line-height: 1.3rem;
+    border: 2px solid;
+    color: #FFF;
+}
+
+.btn-default {background-color: transparent;border-color: #FFF;}
+
+.btn-brown {background-color: #8e7754; border-color: #8e7754;}
+
+
+/* ======== Start of Intro ======== */
+.intro {
+    background-image: url("./../img/drew-coffman-1872.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.intro .overlay {
+    background-color: rgba(0,0,0,.1);
+    height: 100%;
+}
+
+/* ======== Start of About Us ======== */
+
+
+/* ======== Start of Our locations ======== */
+
+
+/* ======== Start of Our Baking ======== */
+
+
+/* ======== Start of Contact Us ======== */
+
+/* ======== Start of Footer ======== */
