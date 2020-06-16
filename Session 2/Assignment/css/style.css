@@ -90,10 +90,7 @@ body::-webkit-scrollbar-thumb {background-color: #8e7754;border-radius: 5px;}
     margin: 5px 5px 10px;
 }
 
-.btn:hover {
-    background-color: #FFF;
-    color: #222;
-}
+.btn:hover {background-color: #FFF;color: #222;}
 
 .btn-default {background-color: transparent;border-color: #FFF;}
 
@@ -337,7 +334,6 @@ body::-webkit-scrollbar-thumb {background-color: #8e7754;border-radius: 5px;}
 }
 
 /* ======== Start of Footer ======== */
-
 .footer .footer-top {
     padding: 50px 0;
 }
