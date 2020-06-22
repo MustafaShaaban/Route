@@ -1,0 +1,169 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Session 3 Assignment 3 - Responsive Style File
+    Reference: Bootstrap 4 Media queries  https://getbootstrap.com/docs/4.1/layout/overview
+    Version: 1.0
+    Author: Mustafa Shaaban
+
+    CSS INDEX
+    ===================
+    01. Small devices (landscape phones, 576px and up)
+        - Intro
+        - Header
+        - About-us
+        - Services
+        - Portfolio
+        - Statistics
+        - Testimonials
+        - Blog
+        - Contact-us
+        - Footer
+
+    02. Medium devices (tablets, 768px and up)
+        - Intro
+        - Header
+        - About-us
+        - Services
+        - Portfolio
+        - Statistics
+        - Testimonials
+        - Blog
+        - Contact-us
+        - Footer
+
+    03. Large devices (desktops, 992px and up)
+        - Intro
+        - Header
+        - About-us
+        - Services
+        - Portfolio
+        - Statistics
+        - Testimonials
+        - Blog
+        - Contact-us
+        - Footer
+
+    04. Extra large devices (large desktops, 1200px and up)
+        - Intro
+        - Header
+        - About-us
+        - Services
+        - Portfolio
+        - Statistics
+        - Testimonials
+        - Blog
+        - Contact-us
+        - Footer
+
+-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+    01.  Small devices (landscape phones, 576px and up)
+-----------------------------------------------------------*/
+@media (min-width: 576px) {
+/*---------- Intro ----------*/
+
+/*---------- Header ----------*/
+
+/*---------- About-us ----------*/
+
+/*---------- Services ----------*/
+
+/*---------- Portfolio ----------*/
+
+/*---------- Statistics ----------*/
+
+/*---------- Testimonials ----------*/
+
+/*---------- Blog ----------*/
+
+/*---------- Contact-us ----------*/
+
+/*---------- Footer ----------*/
+
+
+}
+
+
+/*-----------------------------------------------------------
+    02.  Medium devices (tablets, 768px and up)
+-----------------------------------------------------------*/
+@media (min-width: 768px) {
+    /*---------- Intro ----------*/
+
+    /*---------- Header ----------*/
+
+    /*---------- About-us ----------*/
+
+    /*---------- Services ----------*/
+
+    /*---------- Portfolio ----------*/
+
+    /*---------- Statistics ----------*/
+
+    /*---------- Testimonials ----------*/
+
+    /*---------- Blog ----------*/
+
+    /*---------- Contact-us ----------*/
+
+    /*---------- Footer ----------*/
+
+
+}
+
+
+/*-----------------------------------------------------------
+    03.  Large devices (desktops, 992px and up)
+-----------------------------------------------------------*/
+@media (min-width: 992px) {
+    /*---------- Intro ----------*/
+
+    /*---------- Header ----------*/
+
+    /*---------- About-us ----------*/
+
+    /*---------- Services ----------*/
+
+    /*---------- Portfolio ----------*/
+
+    /*---------- Statistics ----------*/
+
+    /*---------- Testimonials ----------*/
+
+    /*---------- Blog ----------*/
+
+    /*---------- Contact-us ----------*/
+
+    /*---------- Footer ----------*/
+
+
+}
+
+
+/*-----------------------------------------------------------
+    04.  Extra large devices (large desktops, 1200px and up)
+-----------------------------------------------------------*/
+@media (min-width: 1200px) {
+    /*---------- Intro ----------*/
+
+    /*---------- Header ----------*/
+
+    /*---------- About-us ----------*/
+
+    /*---------- Services ----------*/
+
+    /*---------- Portfolio ----------*/
+
+    /*---------- Statistics ----------*/
+
+    /*---------- Testimonials ----------*/
+
+    /*---------- Blog ----------*/
+
+    /*---------- Contact-us ----------*/
+
+    /*---------- Footer ----------*/
+
+
+}
