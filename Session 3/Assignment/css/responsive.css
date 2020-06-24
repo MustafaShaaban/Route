@@ -7,163 +7,260 @@
 
     CSS INDEX
     ===================
-    01. Small devices (landscape phones, 576px and up)
-        - Intro
-        - Header
+    01. Extra small devices (portrait phones, less than 576px)
+        - Theme defaults CSS
+        - Nav-bar
         - About-us
-        - Services
-        - Portfolio
         - Statistics
         - Testimonials
         - Blog
         - Contact-us
-        - Footer
-
-    02. Medium devices (tablets, 768px and up)
-        - Intro
-        - Header
+    02. Small devices (landscape phones, 576px and up)
+        - Theme defaults CSS
+        - Nav-bar
         - About-us
-        - Services
-        - Portfolio
-        - Statistics
         - Testimonials
         - Blog
         - Contact-us
-        - Footer
-
-    03. Large devices (desktops, 992px and up)
-        - Intro
-        - Header
+    03. Medium devices (tablets, 768px and up)
+        - Theme defaults CSS
         - About-us
-        - Services
-        - Portfolio
-        - Statistics
-        - Testimonials
         - Blog
         - Contact-us
-        - Footer
-
-    04. Extra large devices (large desktops, 1200px and up)
-        - Intro
-        - Header
+    04. Large devices (desktops, 992px and up)
+        - Theme defaults CSS
         - About-us
-        - Services
-        - Portfolio
-        - Statistics
-        - Testimonials
         - Blog
         - Contact-us
-        - Footer
+    05. Extra large devices (large desktops, 1200px and up)
+        - Theme defaults CSS
 
 -----------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------
-    01.  Small devices (landscape phones, 576px and up)
+    01.  Extra small devices (portrait phones, less than 576px)
 -----------------------------------------------------------*/
-@media (min-width: 576px) {
-/*---------- Intro ----------*/
+@media all and (max-width: 575.98px) {
 
-/*---------- Header ----------*/
+    /*---------- Theme defaults CSS ----------*/
+    .container {max-width: 1170px;width: 100%;}
 
-/*---------- About-us ----------*/
+    .c-1, .c-2, .c-3, .c-4, .c-5, .c-6 {width: 100%;}
 
-/*---------- Services ----------*/
+    .btn {font-size: 13px;}
 
-/*---------- Portfolio ----------*/
+    /*---------- Nav-bar ----------*/
+    .nav-bar .main-nav .menu {display: none;}
 
-/*---------- Statistics ----------*/
+    .nav-bar .main-nav .menu-btn {display: block;}
 
-/*---------- Testimonials ----------*/
+    /*---------- About-us ----------*/
+    .about-us .portrait .border {
+        border: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
 
-/*---------- Blog ----------*/
+    .about-us .portrait .border .portrait-img {transform: unset;}
 
-/*---------- Contact-us ----------*/
+    .about-us .portrait .border .portrait-img .social-icon {bottom: -1000px;}
 
-/*---------- Footer ----------*/
+    .about-us .about .about-desc h2 {font-size: 30px;}
 
+    .about-us .about .about-desc p {font-size: 13px;}
+
+    .about-us .about .details li {font-size: 13px;}
+
+    /*---------- Testimonials ----------*/
+    .testimonials .testimonial-slider .slider-items {text-align: center;}
+
+    .testimonials .testimonial-slider .fl-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    /*---------- Blog ----------*/
+    /*---------- Contact-us ----------*/
+    .contact-us form.contact .flx .default-input:first-of-type,
+    .contact-us form.contact .flx .default-input:last-of-type {
+        padding: 0;
+    }
 
 }
 
-
 /*-----------------------------------------------------------
-    02.  Medium devices (tablets, 768px and up)
+    02.  Small devices (landscape phones, 576px and up)
 -----------------------------------------------------------*/
-@media (min-width: 768px) {
-    /*---------- Intro ----------*/
+@media all and (min-width: 576px) and (max-width: 767.98px) {
 
-    /*---------- Header ----------*/
+    /*---------- Theme defaults CSS ----------*/
+    .container {max-width: 1170px;width: 100%;}
+
+    .c-1 {width: 100%;}
+
+    .c-2 {width: calc(100% / 1);}
+
+    .c-3 {width: calc(100% / 1);}
+
+    .c-4 {width: calc(100% / 1);}
+
+    .c-s-4 {width: calc(100% / 4);}
+
+    .c-5 {width: calc(100% / 2);}
+
+    .c-6 {width: calc(100% / 2);}
+
+    .btn {font-size: 13px;}
+
+    /*---------- Nav-bar ----------*/
+    .nav-bar .main-nav .menu {display: none;}
+
+    .nav-bar .main-nav .menu-btn {display: block;}
 
     /*---------- About-us ----------*/
+    .about-us .portrait .border {
+        border: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
 
-    /*---------- Services ----------*/
+    .about-us .portrait .border .portrait-img {transform: unset;}
 
-    /*---------- Portfolio ----------*/
+    .about-us .portrait .border .portrait-img .social-icon {bottom: -1000px;}
 
-    /*---------- Statistics ----------*/
+    .about-us .about .about-desc h2 {font-size: 30px;}
+
+    .about-us .about .about-desc p {font-size: 13px;}
+
+    .about-us .about .details li {font-size: 13px;}
 
     /*---------- Testimonials ----------*/
+    .testimonials .testimonial-slider .slider-items {text-align: center;}
+
+    .testimonials .testimonial-slider .fl-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
 
     /*---------- Blog ----------*/
-
     /*---------- Contact-us ----------*/
-
-    /*---------- Footer ----------*/
-
+    .contact-us form.contact .flx .default-input:first-of-type,
+    .contact-us form.contact .flx .default-input:last-of-type {
+        padding: 0;
+    }
 
 }
 
-
 /*-----------------------------------------------------------
-    03.  Large devices (desktops, 992px and up)
+    03.  Medium devices (tablets, 768px and up)
 -----------------------------------------------------------*/
-@media (min-width: 992px) {
-    /*---------- Intro ----------*/
+@media all and (min-width: 768px) and (max-width: 991.98px) {
 
-    /*---------- Header ----------*/
+    /*---------- Theme defaults CSS ----------*/
+    .container {max-width: 1170px;width: 100%;}
+
+    .c-1 {width: 100%;}
+
+    .c-2 {width: calc(100% / 2);}
+
+    .c-3 {width: calc(100% / 2);}
+
+    .c-4 {width: calc(100% / 2);}
+
+    .c-s-4 {width: calc(100% / 4);}
+
+    .c-5 {width: calc(100% / 2);}
+
+    .c-6 {width: calc(100% / 3);}
+
+    .btn {font-size: 13px;}
 
     /*---------- About-us ----------*/
+    .about-us .portrait .border {border: none;}
 
-    /*---------- Services ----------*/
+    .about-us .portrait .border .portrait-img {transform: unset;}
 
-    /*---------- Portfolio ----------*/
+    .about-us .about .about-desc h2 {font-size: 30px;}
 
-    /*---------- Statistics ----------*/
+    .about-us .about .about-desc p {font-size: 13px;}
 
-    /*---------- Testimonials ----------*/
+    .about-us .about .details li {font-size: 13px;}
 
     /*---------- Blog ----------*/
-
     /*---------- Contact-us ----------*/
-
-    /*---------- Footer ----------*/
-
 
 }
 
-
 /*-----------------------------------------------------------
-    04.  Extra large devices (large desktops, 1200px and up)
+    04.  Large devices (desktops, 992px and up)
 -----------------------------------------------------------*/
-@media (min-width: 1200px) {
-    /*---------- Intro ----------*/
+@media all and (min-width: 992px) and (max-width: 1199.98px) {
 
-    /*---------- Header ----------*/
+    /*---------- Theme defaults CSS ----------*/
+    .container {max-width: 1170px;width: 100%;}
+
+    .c-1 {width: 100%;}
+
+    .c-2 {width: calc(100% / 2);}
+
+    .c-3 {width: calc(100% / 3);}
+
+    .c-4 {width: calc(100% / 2);}
+
+    .c-s-4 {width: calc(100% / 4);}
+
+    .c-5 {width: calc(100% / 3);}
+
+    .c-6 {width: calc(100% / 3);}
+
+
+    .btn {font-size: 13px;}
 
     /*---------- About-us ----------*/
+    .about-us .portrait .border {
+        border: none;
+        width: 100%;
+        height: auto;
+    }
 
-    /*---------- Services ----------*/
+    .about-us .portrait .border .portrait-img {transform: unset;}
 
-    /*---------- Portfolio ----------*/
+    .about-us .portrait .border .portrait-img .social-icon {bottom: -1000px;}
 
-    /*---------- Statistics ----------*/
+    .about-us .about .about-desc h2 {font-size: 30px;}
 
-    /*---------- Testimonials ----------*/
+    .about-us .about .about-desc p {font-size: 13px;}
+
+    .about-us .about .details li {font-size: 13px;}
 
     /*---------- Blog ----------*/
-
     /*---------- Contact-us ----------*/
 
-    /*---------- Footer ----------*/
+}
 
+/*-----------------------------------------------------------
+    05.  Extra large devices (large desktops, 1200px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 1200px) {
 
+    /*---------- Theme defaults CSS ----------*/
+    .c-1 {width: 100%;}
+
+    .c-2 {width: calc(100% / 2);}
+
+    .c-3 {width: calc(100% / 3);}
+
+    .c-4 {width: calc(100% / 4);}
+
+    .c-5 {width: calc(100% / 5);}
+
+    .c-6 {width: calc(100% / 6);}
 }
