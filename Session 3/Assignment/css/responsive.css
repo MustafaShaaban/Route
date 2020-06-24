@@ -13,25 +13,19 @@
         - About-us
         - Statistics
         - Testimonials
-        - Blog
         - Contact-us
     02. Small devices (landscape phones, 576px and up)
         - Theme defaults CSS
         - Nav-bar
         - About-us
         - Testimonials
-        - Blog
         - Contact-us
     03. Medium devices (tablets, 768px and up)
         - Theme defaults CSS
         - About-us
-        - Blog
-        - Contact-us
     04. Large devices (desktops, 992px and up)
         - Theme defaults CSS
         - About-us
-        - Blog
-        - Contact-us
     05. Extra large devices (large desktops, 1200px and up)
         - Theme defaults CSS
 
@@ -83,7 +77,6 @@
         margin-bottom: 20px;
     }
 
-    /*---------- Blog ----------*/
     /*---------- Contact-us ----------*/
     .contact-us form.contact .flx .default-input:first-of-type,
     .contact-us form.contact .flx .default-input:last-of-type {
@@ -150,7 +143,6 @@
         margin-bottom: 20px;
     }
 
-    /*---------- Blog ----------*/
     /*---------- Contact-us ----------*/
     .contact-us form.contact .flx .default-input:first-of-type,
     .contact-us form.contact .flx .default-input:last-of-type {
@@ -193,9 +185,6 @@
     .about-us .about .about-desc p {font-size: 13px;}
 
     .about-us .about .details li {font-size: 13px;}
-
-    /*---------- Blog ----------*/
-    /*---------- Contact-us ----------*/
 
 }
 
@@ -240,9 +229,6 @@
     .about-us .about .about-desc p {font-size: 13px;}
 
     .about-us .about .details li {font-size: 13px;}
-
-    /*---------- Blog ----------*/
-    /*---------- Contact-us ----------*/
 
 }
 
