@@ -7,14 +7,14 @@
     CSS INDEX
     ===================
     01. Theme defaults CSS
-    02. Intro css here
-    03. Header css here
+    02. Nav-bar css here
+    03. Intro css here
     04. About-us css here
     05. Services css here
     06. Portfolio css here
     07. Statistics css
     08. Testimonials css here
-    09. Blog css here
+    9. Blog css here
     10. Contact-us css here
     11. Footer css here
 
@@ -24,20 +24,62 @@
     01.  Theme defaults CSS
 ----------------------------------------*/
 * {box-sizing: border-box; transition: .3s all ease-in-out;}
-
+html {scroll-behavior: smooth;}
 body {
     margin: 0;
     color: #555555;
 }
+
 
 p {margin: 0 0 15px;}
 
 p, a, li, span {font-family: "Roboto", sans-serif;}
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 10px;
+    position: relative;
+    margin: 0 0 5px;
     font-family: 'Source Sans Pro', sans-serif;
     color: #333;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 0;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+h2:before {
+    content: "";
+    width: 160px;
+    height: 1px;
+    background-color: #ff305b;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 80px);
+    right: calc(50% - 80px);
+}
+
+h2:after {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 40px);
+    right: calc(50% - 40px);
+    border-top: 1px solid #ff305b;
+    border-bottom: 1px solid #ff305b;
+    margin: 5px 0;
+    padding: 4px 0;
 }
 
 a {text-decoration: none;}
@@ -54,6 +96,8 @@ body::-webkit-scrollbar-thumb {background-color: #ff305b;border-radius: 5px;}
 
 .text-center {text-align: center;}
 
+.w-15 {width: 15%; padding: 0 10px;}
+
 .w-20 {width: 20%; padding: 0 10px;}
 
 .w-25 {width: 25%; padding: 0 10px;}
@@ -69,6 +113,10 @@ body::-webkit-scrollbar-thumb {background-color: #ff305b;border-radius: 5px;}
 .w-70 {width: 70%; padding: 0 10px;}
 
 .w-75 {width: 75%; padding: 0 10px;}
+
+.w-80 {width: 80%; padding: 0 10px;}
+
+.w-85 {width: 85%; padding: 0 10px;}
 
 .w-100 {width: 100%;}
 
@@ -115,7 +163,7 @@ body::-webkit-scrollbar-thumb {background-color: #ff305b;border-radius: 5px;}
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    padding: 15px 28px;
+    padding: 10px 24px;
     font-size: 16px;
     line-height: 1.3rem;
     color: #fff;
@@ -127,52 +175,493 @@ body::-webkit-scrollbar-thumb {background-color: #ff305b;border-radius: 5px;}
 
 .btn:hover {background-color: #ec2403; color: #fff;}
 
-/*----------------------------------------
-    02.  Intro css here
-----------------------------------------*/
-.intro {}
+.hidden {display: none}
 
 /*----------------------------------------
-    03.  Header css here
+    02.  Nav-bar css here
 ----------------------------------------*/
-.intro .header {}
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.nav-bar.sticky {
+    background-color: #333;
+}
+
+.nav-bar .main-nav .logo a {
+    display: block;
+    padding: 20px 7px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff305b;
+}
+
+.nav-bar .main-nav .menu-btn a {
+    display: block;
+    font-weight: 300;
+    padding: 20px 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.nav-bar .main-nav .menu {
+    overflow: hidden;
+    float: right;
+}
+
+.nav-bar .main-nav .menu .menu-item {
+    float: left;
+}
+
+.nav-bar .main-nav .menu .menu-item.active a {
+    color: #ff305b;
+}
+
+.nav-bar .main-nav .menu .menu-item a {
+    display: block;
+    font-weight: 300;
+    padding: 20px 10px;
+    color: #fff;
+}
+
+.nav-bar .main-nav .menu .menu-item a:hover {
+    color: #ff305b;
+}
+
+/*----------------------------------------
+    03.  Intro css here
+----------------------------------------*/
+.intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../img/slider/slider-01.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.intro:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.intro .caption {
+    z-index: 1;
+}
+
+.intro .caption h3,
+.intro .caption h4 {
+    color: #fff;
+}
+
+.intro .caption h1 {
+    color: #ff305b;
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro .caption h4 {
+    font-size: 26px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    color: #eee;
+}
+
 
 /*----------------------------------------
     04.  About-us css here
 ----------------------------------------*/
-.about-us {}
+.about-us .portrait .border {
+    border: 7px solid #333;
+    width: 75%;
+    height: 501px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.about-us .portrait .border .portrait-img {
+    transform: translate(20px, 20px);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.about-us .portrait .border .portrait-img .social-icon {
+    justify-content: center;
+    position: absolute;
+    bottom: -500px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+}
+.about-us .portrait .border .portrait-img .social-icon a {
+    color: #ffffff;
+    display: block;
+    font-size: 18px;
+    padding: 0 10px;
+}
+.about-us .portrait .border .portrait-img .social-icon a:hover {
+    color: #ff305b;
+}
+.about-us .portrait .border .portrait-img:hover .social-icon{
+    bottom: 0;
+}
+.about-us .about .about-desc {
+    margin-bottom: 25px;
+    border-bottom: 1px dashed #999;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #555555;
+}
+
+.about-us .about .about-desc h2 {
+    position: relative;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: .7;
+    margin-bottom: 25px;
+    padding-left: 13px;
+    padding-bottom: 0;
+}
+
+.about-us .about .about-desc h2:before {
+    content: "";
+    height: 100%;
+    width: 4px;
+    background-color: #ff305b;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.about-us .about .about-desc h2:after {
+    display: none;
+}
+
+.about-us .about .about-desc p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.about-us .about .details li {
+    margin-bottom: 25px;
+}
+
+.about-us .about .details li a {
+    color: #555555;
+}
 
 /*----------------------------------------
     05.  Services css here
 ----------------------------------------*/
-.services {}
+.services .services-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 0;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.services .service-item {
+    padding: 30px 10px;
+}
+
+.services .service-item:hover {
+    background-color: #fff;
+    box-shadow: 3px 5px 10px 2px #b3b3b3;
+}
+
+.services .service-item .icon i {
+    display: block;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff305b;
+}
+
+.services .service-item .desc p {
+    line-height: 1.5;
+}
 
 /*----------------------------------------
     06.  Portfolio css here
 ----------------------------------------*/
-.portfolios {}
+.portfolios .portfolio-header .filters {
+    margin-bottom: 35px;
+}
+
+.portfolios .portfolio-header .filters ul {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolios .portfolio-header .filters .filter-type {
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+.portfolios .portfolio-header .filters .filter-type a {
+    color: #333;
+}
+
+.portfolios .portfolio-header .filters .filter-type a:hover,
+.portfolios .portfolio-header .filters .filter-type.active a {
+    color: #ff305b;
+}
+
+.portfolios .portfolio-items .c-3 {
+    margin-bottom: 20px;
+}
+
+.portfolios .portfolio-items .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    max-height: 270px;
+}
+
+.portfolios .portfolio-items .portfolio-item .open-modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    bottom: 0px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 20px;
+    color: #ff305b;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.portfolios .portfolio-items .portfolio-item .open-modal:hover {
+    opacity: 1;
+
+}
 
 /*----------------------------------------
     07.  Statistics css
 ----------------------------------------*/
-.statistics {}
+.statistics {
+    padding: 100px 0;
+}
+
+.statistics .statics .static-item i {
+    color: #ff305b;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.statistics .statics .static-item h3 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.statistics .statics .static-item h5 {
+    color: #555555;
+    font-size: 16px;
+    margin: 0;
+}
 
 /*----------------------------------------
     08.  Testimonials css here
 ----------------------------------------*/
-.testimonials {}
+.testimonials .testimonial-slider .slider-items {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.testimonials .testimonial-slider .slide-content {
+    position: relative;
+    background: #f1f1f1;
+    border-radius: 5px;
+    padding: 40px;
+}
+.testimonials .testimonial-slider .slide-content:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: none;
+    display: block;
+    border-left: 90px solid #ff305b;
+    border-top: 90px solid #ff305b;
+    border-bottom: 90px solid transparent;
+    border-right: 90px solid transparent;
+}
+.testimonials .testimonial-slider .profile-avatar {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    min-width: 110px;
+    max-width: 120px;
+}
+.testimonials .testimonial-slider .slide-content h4 a {
+    color: #777777;
+    font-size: 15px;
+}
+.testimonials .testimonial-slider .slide-content h4,
+.testimonials .testimonial-slider .slide-content .review {
+    margin-bottom: 15px;
+}
+.testimonials .testimonial-slider .slide-content .review {
+    color: #f1c30d;
+}
+.testimonials .testimonial-slider .indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.testimonials .testimonial-slider .indicator {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ff305b;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+.testimonials .testimonial-slider .indicator.active {
+    background-color: #ff305b;
+    border: 1px solid #ff305b;
+    border-radius: 5px;
+    width: 25px;
+}
 
 /*----------------------------------------
-    09.  Blog css here
+    9.  Blog css here
 ----------------------------------------*/
-.blog {}
+.blog .blog-content .blog-item {
+    min-height: 460px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.blog .blog-content .blog-item .blog-info {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.blog .blog-content .blog-item .blog-info span {
+    margin-bottom: 10px;
+}
+
+.blog .blog-content .blog-item .blog-info h3 {
+    margin-bottom: 10px;
+}
+
+.blog .blog-content .blog-item .blog-info p {
+    margin-bottom: 15px;
+}
+
+.blog .blog-content .blog-item .blog-info a {
+    margin-bottom: 10px;
+}
+
+.blog .blog-content .blog-item .blog-info span,
+.blog .blog-content .blog-item .blog-info h3,
+.blog .blog-content .blog-item .blog-info p,
+.blog .blog-content .blog-item .blog-info a {
+    display: block;
+    color: #333;
+}
 
 /*----------------------------------------
     10.  Contact-us css here
 ----------------------------------------*/
-.contact-us {}
+.contact-us form.contact {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.contact-us form.contact .flx {
+    justify-content: space-between;
+}
+
+.contact-us form.contact .default-input {
+    padding-bottom: 0;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.contact-us form.contact .flx .default-input:first-of-type {
+    padding-left: 0;
+}
+
+.contact-us form.contact .flx .default-input:last-of-type {
+    padding-right: 0;
+}
+
+.contact-us form.contact .default-input .fk-input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.contact-us form.contact .default-input .fk-input:focus {
+    color: #000;
+    outline: 0 none;
+    border-color: #ff305b;
+    box-shadow: 0 0 2px 2px rgba(255, 48, 91, .2);
+}
+
+.contact-us form.contact .default-input textarea {
+    height: auto !important;
+}
 
 /*----------------------------------------
     11.  Footer css here
 ----------------------------------------*/
-.footer {}
+.footer {
+    padding: 50px 0;
+}
+
+.footer .social-icon a {
+    color: #ffffff;
+    display: inline-block;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.footer .social-icon a:hover {
+    color: #ff305b;
+}
+
+.footer .copyrights {
+    color: #ffffff;
+    margin: 0;
+}
+
+.footer .copyrights a {
+    color: #ff305b;
+}
+
+.footer .copyrights a:hover {
+    color: #fff;
+}

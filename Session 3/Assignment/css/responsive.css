@@ -9,64 +9,31 @@
     ===================
     01. Extra small devices (portrait phones, less than 576px)
         - Theme defaults CSS
-        - Intro
-        - Header
+        - Nav-bar
         - About-us
-        - Services
-        - Portfolio
         - Statistics
         - Testimonials
         - Blog
         - Contact-us
-        - Footer
     02. Small devices (landscape phones, 576px and up)
         - Theme defaults CSS
-        - Intro
-        - Header
+        - Nav-bar
         - About-us
-        - Services
-        - Portfolio
-        - Statistics
         - Testimonials
         - Blog
         - Contact-us
-        - Footer
     03. Medium devices (tablets, 768px and up)
         - Theme defaults CSS
-        - Intro
-        - Header
         - About-us
-        - Services
-        - Portfolio
-        - Statistics
-        - Testimonials
         - Blog
         - Contact-us
-        - Footer
     04. Large devices (desktops, 992px and up)
         - Theme defaults CSS
-        - Intro
-        - Header
         - About-us
-        - Services
-        - Portfolio
-        - Statistics
-        - Testimonials
         - Blog
         - Contact-us
-        - Footer
     05. Extra large devices (large desktops, 1200px and up)
         - Theme defaults CSS
-        - Intro
-        - Header
-        - About-us
-        - Services
-        - Portfolio
-        - Statistics
-        - Testimonials
-        - Blog
-        - Contact-us
-        - Footer
 
 -----------------------------------------------------------------------------------*/
 
@@ -76,24 +43,52 @@
 @media all and (max-width: 575.98px) {
 
     /*---------- Theme defaults CSS ----------*/
-    .container {
-        max-width: 1170px;
-        width: 100%;
-    }
+    .container {max-width: 1170px;width: 100%;}
 
     .c-1, .c-2, .c-3, .c-4, .c-5, .c-6 {width: 100%;}
 
-    /*---------- Intro ----------*/
-    /*---------- Header ----------*/
+    .btn {font-size: 13px;}
+
+    /*---------- Nav-bar ----------*/
+    .nav-bar .main-nav .menu {display: none;}
+
+    .nav-bar .main-nav .menu-btn {display: block;}
+
     /*---------- About-us ----------*/
-    /*---------- Services ----------*/
-    /*---------- Portfolio ----------*/
-    /*---------- Statistics ----------*/
+    .about-us .portrait .border {
+        border: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .about-us .portrait .border .portrait-img {transform: unset;}
+
+    .about-us .portrait .border .portrait-img .social-icon {bottom: -1000px;}
+
+    .about-us .about .about-desc h2 {font-size: 30px;}
+
+    .about-us .about .about-desc p {font-size: 13px;}
+
+    .about-us .about .details li {font-size: 13px;}
+
     /*---------- Testimonials ----------*/
+    .testimonials .testimonial-slider .slider-items {text-align: center;}
+
+    .testimonials .testimonial-slider .fl-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
     /*---------- Blog ----------*/
     /*---------- Contact-us ----------*/
-    /*---------- Footer ----------*/
-
+    .contact-us form.contact .flx .default-input:first-of-type,
+    .contact-us form.contact .flx .default-input:last-of-type {
+        padding: 0;
+    }
 
 }
 
@@ -103,10 +98,7 @@
 @media all and (min-width: 576px) and (max-width: 767.98px) {
 
     /*---------- Theme defaults CSS ----------*/
-    .container {
-        max-width: 1170px;
-        width: 100%;
-    }
+    .container {max-width: 1170px;width: 100%;}
 
     .c-1 {width: 100%;}
 
@@ -122,17 +114,48 @@
 
     .c-6 {width: calc(100% / 2);}
 
-    /*---------- Intro ----------*/
-    /*---------- Header ----------*/
+    .btn {font-size: 13px;}
+
+    /*---------- Nav-bar ----------*/
+    .nav-bar .main-nav .menu {display: none;}
+
+    .nav-bar .main-nav .menu-btn {display: block;}
+
     /*---------- About-us ----------*/
-    /*---------- Services ----------*/
-    /*---------- Portfolio ----------*/
-    /*---------- Statistics ----------*/
+    .about-us .portrait .border {
+        border: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .about-us .portrait .border .portrait-img {transform: unset;}
+
+    .about-us .portrait .border .portrait-img .social-icon {bottom: -1000px;}
+
+    .about-us .about .about-desc h2 {font-size: 30px;}
+
+    .about-us .about .about-desc p {font-size: 13px;}
+
+    .about-us .about .details li {font-size: 13px;}
+
     /*---------- Testimonials ----------*/
+    .testimonials .testimonial-slider .slider-items {text-align: center;}
+
+    .testimonials .testimonial-slider .fl-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
     /*---------- Blog ----------*/
     /*---------- Contact-us ----------*/
-    /*---------- Footer ----------*/
-
+    .contact-us form.contact .flx .default-input:first-of-type,
+    .contact-us form.contact .flx .default-input:last-of-type {
+        padding: 0;
+    }
 
 }
 
@@ -142,10 +165,7 @@
 @media all and (min-width: 768px) and (max-width: 991.98px) {
 
     /*---------- Theme defaults CSS ----------*/
-    .container {
-        max-width: 1170px;
-        width: 100%;
-    }
+    .container {max-width: 1170px;width: 100%;}
 
     .c-1 {width: 100%;}
 
@@ -161,17 +181,21 @@
 
     .c-6 {width: calc(100% / 3);}
 
-    /*---------- Intro ----------*/
-    /*---------- Header ----------*/
+    .btn {font-size: 13px;}
+
     /*---------- About-us ----------*/
-    /*---------- Services ----------*/
-    /*---------- Portfolio ----------*/
-    /*---------- Statistics ----------*/
-    /*---------- Testimonials ----------*/
+    .about-us .portrait .border {border: none;}
+
+    .about-us .portrait .border .portrait-img {transform: unset;}
+
+    .about-us .about .about-desc h2 {font-size: 30px;}
+
+    .about-us .about .about-desc p {font-size: 13px;}
+
+    .about-us .about .details li {font-size: 13px;}
+
     /*---------- Blog ----------*/
     /*---------- Contact-us ----------*/
-    /*---------- Footer ----------*/
-
 
 }
 
@@ -181,10 +205,7 @@
 @media all and (min-width: 992px) and (max-width: 1199.98px) {
 
     /*---------- Theme defaults CSS ----------*/
-    .container {
-        max-width: 1170px;
-        width: 100%;
-    }
+    .container {max-width: 1170px;width: 100%;}
 
     .c-1 {width: 100%;}
 
@@ -200,17 +221,28 @@
 
     .c-6 {width: calc(100% / 3);}
 
-    /*---------- Intro ----------*/
-    /*---------- Header ----------*/
+
+    .btn {font-size: 13px;}
+
     /*---------- About-us ----------*/
-    /*---------- Services ----------*/
-    /*---------- Portfolio ----------*/
-    /*---------- Statistics ----------*/
-    /*---------- Testimonials ----------*/
+    .about-us .portrait .border {
+        border: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .about-us .portrait .border .portrait-img {transform: unset;}
+
+    .about-us .portrait .border .portrait-img .social-icon {bottom: -1000px;}
+
+    .about-us .about .about-desc h2 {font-size: 30px;}
+
+    .about-us .about .about-desc p {font-size: 13px;}
+
+    .about-us .about .details li {font-size: 13px;}
+
     /*---------- Blog ----------*/
     /*---------- Contact-us ----------*/
-    /*---------- Footer ----------*/
-
 
 }
 
