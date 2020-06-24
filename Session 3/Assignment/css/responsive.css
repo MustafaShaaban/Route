@@ -7,7 +7,8 @@
 
     CSS INDEX
     ===================
-    01. Small devices (landscape phones, 576px and up)
+    01. Extra small devices (portrait phones, less than 576px)
+        - Theme defaults CSS
         - Intro
         - Header
         - About-us
@@ -18,8 +19,8 @@
         - Blog
         - Contact-us
         - Footer
-
-    02. Medium devices (tablets, 768px and up)
+    02. Small devices (landscape phones, 576px and up)
+        - Theme defaults CSS
         - Intro
         - Header
         - About-us
@@ -30,8 +31,8 @@
         - Blog
         - Contact-us
         - Footer
-
-    03. Large devices (desktops, 992px and up)
+    03. Medium devices (tablets, 768px and up)
+        - Theme defaults CSS
         - Intro
         - Header
         - About-us
@@ -42,8 +43,20 @@
         - Blog
         - Contact-us
         - Footer
-
-    04. Extra large devices (large desktops, 1200px and up)
+    04. Large devices (desktops, 992px and up)
+        - Theme defaults CSS
+        - Intro
+        - Header
+        - About-us
+        - Services
+        - Portfolio
+        - Statistics
+        - Testimonials
+        - Blog
+        - Contact-us
+        - Footer
+    05. Extra large devices (large desktops, 1200px and up)
+        - Theme defaults CSS
         - Intro
         - Header
         - About-us
@@ -58,112 +71,164 @@
 -----------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------
-    01.  Small devices (landscape phones, 576px and up)
+    01.  Extra small devices (portrait phones, less than 576px)
 -----------------------------------------------------------*/
-@media (min-width: 576px) {
-/*---------- Intro ----------*/
+@media all and (max-width: 575.98px) {
 
-/*---------- Header ----------*/
+    /*---------- Theme defaults CSS ----------*/
+    .container {
+        max-width: 1170px;
+        width: 100%;
+    }
 
-/*---------- About-us ----------*/
+    .c-1, .c-2, .c-3, .c-4, .c-5, .c-6 {width: 100%;}
 
-/*---------- Services ----------*/
-
-/*---------- Portfolio ----------*/
-
-/*---------- Statistics ----------*/
-
-/*---------- Testimonials ----------*/
-
-/*---------- Blog ----------*/
-
-/*---------- Contact-us ----------*/
-
-/*---------- Footer ----------*/
-
-
-}
-
-
-/*-----------------------------------------------------------
-    02.  Medium devices (tablets, 768px and up)
------------------------------------------------------------*/
-@media (min-width: 768px) {
     /*---------- Intro ----------*/
-
     /*---------- Header ----------*/
-
     /*---------- About-us ----------*/
-
     /*---------- Services ----------*/
-
     /*---------- Portfolio ----------*/
-
     /*---------- Statistics ----------*/
-
     /*---------- Testimonials ----------*/
-
     /*---------- Blog ----------*/
-
     /*---------- Contact-us ----------*/
-
     /*---------- Footer ----------*/
 
 
 }
 
-
 /*-----------------------------------------------------------
-    03.  Large devices (desktops, 992px and up)
+    02.  Small devices (landscape phones, 576px and up)
 -----------------------------------------------------------*/
-@media (min-width: 992px) {
+@media all and (min-width: 576px) and (max-width: 767.98px) {
+
+    /*---------- Theme defaults CSS ----------*/
+    .container {
+        max-width: 1170px;
+        width: 100%;
+    }
+
+    .c-1 {width: 100%;}
+
+    .c-2 {width: calc(100% / 1);}
+
+    .c-3 {width: calc(100% / 1);}
+
+    .c-4 {width: calc(100% / 1);}
+
+    .c-s-4 {width: calc(100% / 4);}
+
+    .c-5 {width: calc(100% / 2);}
+
+    .c-6 {width: calc(100% / 2);}
+
     /*---------- Intro ----------*/
-
     /*---------- Header ----------*/
-
     /*---------- About-us ----------*/
-
     /*---------- Services ----------*/
-
     /*---------- Portfolio ----------*/
-
     /*---------- Statistics ----------*/
-
     /*---------- Testimonials ----------*/
-
     /*---------- Blog ----------*/
-
     /*---------- Contact-us ----------*/
-
     /*---------- Footer ----------*/
 
 
 }
 
-
 /*-----------------------------------------------------------
-    04.  Extra large devices (large desktops, 1200px and up)
+    03.  Medium devices (tablets, 768px and up)
 -----------------------------------------------------------*/
-@media (min-width: 1200px) {
+@media all and (min-width: 768px) and (max-width: 991.98px) {
+
+    /*---------- Theme defaults CSS ----------*/
+    .container {
+        max-width: 1170px;
+        width: 100%;
+    }
+
+    .c-1 {width: 100%;}
+
+    .c-2 {width: calc(100% / 2);}
+
+    .c-3 {width: calc(100% / 2);}
+
+    .c-4 {width: calc(100% / 2);}
+
+    .c-s-4 {width: calc(100% / 4);}
+
+    .c-5 {width: calc(100% / 2);}
+
+    .c-6 {width: calc(100% / 3);}
+
     /*---------- Intro ----------*/
-
     /*---------- Header ----------*/
-
     /*---------- About-us ----------*/
-
     /*---------- Services ----------*/
-
     /*---------- Portfolio ----------*/
-
     /*---------- Statistics ----------*/
-
     /*---------- Testimonials ----------*/
-
     /*---------- Blog ----------*/
-
     /*---------- Contact-us ----------*/
-
     /*---------- Footer ----------*/
 
 
+}
+
+/*-----------------------------------------------------------
+    04.  Large devices (desktops, 992px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 992px) and (max-width: 1199.98px) {
+
+    /*---------- Theme defaults CSS ----------*/
+    .container {
+        max-width: 1170px;
+        width: 100%;
+    }
+
+    .c-1 {width: 100%;}
+
+    .c-2 {width: calc(100% / 2);}
+
+    .c-3 {width: calc(100% / 3);}
+
+    .c-4 {width: calc(100% / 2);}
+
+    .c-s-4 {width: calc(100% / 4);}
+
+    .c-5 {width: calc(100% / 3);}
+
+    .c-6 {width: calc(100% / 3);}
+
+    /*---------- Intro ----------*/
+    /*---------- Header ----------*/
+    /*---------- About-us ----------*/
+    /*---------- Services ----------*/
+    /*---------- Portfolio ----------*/
+    /*---------- Statistics ----------*/
+    /*---------- Testimonials ----------*/
+    /*---------- Blog ----------*/
+    /*---------- Contact-us ----------*/
+    /*---------- Footer ----------*/
+
+
+}
+
+/*-----------------------------------------------------------
+    05.  Extra large devices (large desktops, 1200px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 1200px) {
+
+    /*---------- Theme defaults CSS ----------*/
+    .c-1 {width: 100%;}
+
+    .c-2 {width: calc(100% / 2);}
+
+    .c-3 {width: calc(100% / 3);}
+
+    .c-4 {width: calc(100% / 4);}
+
+    .c-5 {width: calc(100% / 5);}
+
+    .c-6 {width: calc(100% / 6);}
 }

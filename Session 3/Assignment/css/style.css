@@ -6,48 +6,149 @@
 
     CSS INDEX
     ===================
-    01. Theme default CSS
-    02. Intro css hear
-    03. Header css hear
-    04. About-us css hear
-    05. Services css hear
-    06. Portfolio css hear
+    01. Theme defaults CSS
+    02. Intro css here
+    03. Header css here
+    04. About-us css here
+    05. Services css here
+    06. Portfolio css here
     07. Statistics css
-    08. Testimonials css hear
-    09. Blog css hear
-    10. Contact-us css hear
-    11. Footer css hear
+    08. Testimonials css here
+    09. Blog css here
+    10. Contact-us css here
+    11. Footer css here
 
 -----------------------------------------------------------------------------------*/
 
 /*----------------------------------------
-    01.  Theme default CSS
+    01.  Theme defaults CSS
 ----------------------------------------*/
-* {margin: 0; box-sizing: border-box; transition: .3s all ease-in-out;}
+* {box-sizing: border-box; transition: .3s all ease-in-out;}
 
+body {
+    margin: 0;
+    color: #555555;
+}
+
+p {margin: 0 0 15px;}
+
+p, a, li, span {font-family: "Roboto", sans-serif;}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+}
+
+a {text-decoration: none;}
+
+a:hover {color: #ff305b;}
+
+body::-webkit-scrollbar {width: 5px;}
+
+body::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);}
+
+body::-webkit-scrollbar-thumb {background-color: #ff305b;border-radius: 5px;}
+
+.container {width: 1170px;margin: 0 auto; padding: 0 15px;}
+
+.text-center {text-align: center;}
+
+.w-20 {width: 20%; padding: 0 10px;}
+
+.w-25 {width: 25%; padding: 0 10px;}
+
+.w-30 {width: 33.33333333333333%; padding: 0 10px;}
+
+.w-40 {width: 40%; padding: 0 10px;}
+
+.w-50 {width: 50%; padding: 0 10px;}
+
+.w-60 {width: 60%; padding: 0 10px;}
+
+.w-70 {width: 70%; padding: 0 10px;}
+
+.w-75 {width: 75%; padding: 0 10px;}
+
+.w-100 {width: 100%;}
+
+.c-1, .c-2, .c-3, .c-4, .c-5, .c-6 {padding: 0 10px;}
+
+.fl-container {overflow: auto;box-sizing: border-box;}
+
+.fl-left {float: left;}
+
+.fl-right {float: right;}
+
+.flx {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.c-1 {width: 100%;}
+
+.c-2 {width: calc(100% / 2);}
+
+.c-3 {width: calc(100% / 3);}
+
+.c-4 {width: calc(100% / 4);}
+
+.c-5 {width: calc(100% / 5);}
+
+.c-6 {width: calc(100% / 6);}
+
+.p9-6 {padding: 90px 0 60px 0;}
+
+.ul-reset {list-style: none;padding: 0; margin: 0;}
+
+.bg-dark-gray {background-color: #333333;}
+
+.bg-gray {background-color: #f1f1f1;}
+
+.btn {
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    background-color: transparent;
+    outline: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 15px 28px;
+    font-size: 16px;
+    line-height: 1.3rem;
+    color: #fff;
+    border: none;
+    margin: 5px 5px 10px;
+}
+
+.btn-rose {background-color: #ff305b; border: 1px solid #ec2403}
+
+.btn:hover {background-color: #ec2403; color: #fff;}
 
 /*----------------------------------------
-    02.  Intro css hear
+    02.  Intro css here
 ----------------------------------------*/
 .intro {}
 
 /*----------------------------------------
-    03.  Header css hear
+    03.  Header css here
 ----------------------------------------*/
 .intro .header {}
 
 /*----------------------------------------
-    04.  About-us css hear
+    04.  About-us css here
 ----------------------------------------*/
 .about-us {}
 
 /*----------------------------------------
-    05.  Services css hear
+    05.  Services css here
 ----------------------------------------*/
 .services {}
 
 /*----------------------------------------
-    06.  Portfolio css hear
+    06.  Portfolio css here
 ----------------------------------------*/
 .portfolios {}
 
@@ -57,21 +158,21 @@
 .statistics {}
 
 /*----------------------------------------
-    08.  Testimonials css hear
+    08.  Testimonials css here
 ----------------------------------------*/
 .testimonials {}
 
 /*----------------------------------------
-    09.  Blog css hear
+    09.  Blog css here
 ----------------------------------------*/
 .blog {}
 
 /*----------------------------------------
-    10.  Contact-us css hear
+    10.  Contact-us css here
 ----------------------------------------*/
 .contact-us {}
 
 /*----------------------------------------
-    11.  Footer css hear
+    11.  Footer css here
 ----------------------------------------*/
 .footer {}
