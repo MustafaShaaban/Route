@@ -62,8 +62,7 @@
 
     .about-us .about .about-desc h2 {font-size: 30px;}
 
-    .about-us .about .about-desc p {font-size: 13px;}
-
+    .about-us .about .about-desc p,
     .about-us .about .details li {font-size: 13px;}
 
     /*---------- Testimonials ----------*/
@@ -83,6 +82,10 @@
         padding: 0;
     }
 
+    .contact-us form.contact .default-input {
+        text-align: center;
+    }
+
 }
 
 /*-----------------------------------------------------------
@@ -93,19 +96,11 @@
     /*---------- Theme defaults CSS ----------*/
     .container {max-width: 1170px;width: 100%;}
 
-    .c-1 {width: 100%;}
-
-    .c-2 {width: calc(100% / 1);}
-
-    .c-3 {width: calc(100% / 1);}
-
-    .c-4 {width: calc(100% / 1);}
+    .c-1, .c-2, .c-3, .c-4 {width: calc(100%)}
 
     .c-s-4 {width: calc(100% / 4);}
 
-    .c-5 {width: calc(100% / 2);}
-
-    .c-6 {width: calc(100% / 2);}
+    .c-5, .c-6 {width: calc(100% / 2)}
 
     .btn {font-size: 13px;}
 
@@ -149,6 +144,10 @@
         padding: 0;
     }
 
+    .contact-us form.contact .default-input {
+        text-align: center;
+    }
+
 }
 
 /*-----------------------------------------------------------
@@ -161,15 +160,9 @@
 
     .c-1 {width: 100%;}
 
-    .c-2 {width: calc(100% / 2);}
-
-    .c-3 {width: calc(100% / 2);}
-
-    .c-4 {width: calc(100% / 2);}
+    .c-2, .c-3, .c-4, .c-5 {width: calc(100% / 2);}
 
     .c-s-4 {width: calc(100% / 4);}
-
-    .c-5 {width: calc(100% / 2);}
 
     .c-6 {width: calc(100% / 3);}
 
@@ -182,8 +175,7 @@
 
     .about-us .about .about-desc h2 {font-size: 30px;}
 
-    .about-us .about .about-desc p {font-size: 13px;}
-
+    .about-us .about .about-desc p,
     .about-us .about .details li {font-size: 13px;}
 
 }
@@ -226,8 +218,7 @@
 
     .about-us .about .about-desc h2 {font-size: 30px;}
 
-    .about-us .about .about-desc p {font-size: 13px;}
-
+    .about-us .about .about-desc p,
     .about-us .about .details li {font-size: 13px;}
 
 }

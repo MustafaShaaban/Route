@@ -11,16 +11,16 @@
         - Scroll
         - Grid System
         - Buttons
-    02. Nav-bar css here
-    03. Intro css here
-    04. About-us css here
-    05. Services css here
-    06. Portfolio css here
-    07. Statistics css
-    08. Testimonials css here
-    09. Blog css here
-    10. Contact-us css here
-    11. Footer css here
+    02. Nav-bar CSS
+    03. Intro CSS
+    04. About-us CSS
+    05. Services CSS
+    06. Portfolio CSS
+    07. Statistics CSS
+    08. Testimonials CSS
+    09. Blog CSS
+    10. Contact-us CSS
+    11. Footer CSS
 
 -----------------------------------------------------------------------------------*/
 
@@ -29,7 +29,7 @@
 ----------------------------------------*/
 * {box-sizing: border-box; transition: .3s all ease-in-out;}
 
-html {scroll-behavior: smooth;}
+/*html {scroll-behavior: smooth;}*/
 
 body {margin: 0;color: #555555;}
 
@@ -190,18 +190,27 @@ body::-webkit-scrollbar-thumb {background-color: #ff305b;border-radius: 5px;}
     02.  Nav-bar css here
 ----------------------------------------*/
 .nav-bar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
+    line-height: 1;
+    transition: none;
+    overflow: hidden;
 }
 
 .nav-bar.sticky {background-color: #333;}
 
+.nav-bar.sticky .main-nav .logo a {padding: 13px 7px;}
+
+.nav-bar.sticky .main-nav .menu .menu-item a {padding: 15px 10px;}
+
+.nav-bar.sticky .main-nav .menu-btn a {padding: 13px 10px;}
+
 .nav-bar .main-nav .logo a {
     display: block;
-    padding: 20px 7px;
+    padding: 17px 7px;
     font-size: 24px;
     font-weight: 800;
     color: #ff305b;
@@ -407,7 +416,7 @@ body::-webkit-scrollbar-thumb {background-color: #ff305b;border-radius: 5px;}
     right: 0;
     height: 100%;
     display: flex;
-    bottom: 0px;
+    bottom: 0;
     justify-content: flex-end;
     align-items: flex-end;
     background-color: rgba(0, 0, 0, .5);
@@ -422,7 +431,9 @@ body::-webkit-scrollbar-thumb {background-color: #ff305b;border-radius: 5px;}
 /*----------------------------------------
     07.  Statistics css
 ----------------------------------------*/
-.statistics {padding: 100px 0;}
+.statistics {padding: 100px 0 60px 0;}
+
+.statistics .statics .static-item {padding-bottom: 40px}
 
 .statistics .statics .static-item i {color: #ff305b;font-size: 26px;margin-bottom: 15px;}
 
