@@ -1,0 +1,111 @@
+/*-----------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Session 5 Assignment 5 - Responsive Style File
+    Reference: Bootstrap 4 Media queries  https://getbootstrap.com/docs/4.1/layout/overview
+    Version: 1.0
+    Author: Mustafa Shaaban
+
+    CSS INDEX
+    ===================
+    01. Extra small devices (portrait phones, less than 576px)
+        - Theme main-nav CSS
+        - Theme about CSS
+        - Theme testimonials CSS
+        - Theme contact-us CSS
+
+    02. Small devices (landscape phones, 576px and up)
+        - Theme main-nav CSS
+        - Theme about CSS
+        - Theme testimonials CSS
+        - Theme contact-us CSS
+
+    03. Medium devices (tablets, 768px and up)
+        - Theme main-nav CSS
+        - Theme about CSS
+        - Theme testimonials CSS
+
+    04. Large devices (desktops, 992px and up)
+    05. Extra large devices (large desktops, 1200px and up)
+
+-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+    01.  Extra small devices (portrait phones, less than 576px)
+-----------------------------------------------------------*/
+@media all and (max-width: 575.98px) {
+
+    /* Theme main-nav CSS */
+    .main-nav .navbar .nav-item.active .nav-link:after, .main-nav .navbar .nav-item .nav-link:hover:after {width: 100%;}
+
+    .main-nav .navbar .nav-item .nav-link:after {left: 0;}
+
+    /* Theme about CSS */
+    .about .info {text-align: center;}
+
+    .about .info img {margin-bottom: 20px;}
+
+    .about .info li p {margin-bottom: 5px;}
+
+    .about .sec-header-sub {padding-top: 1rem;margin-bottom: 1.5rem !important;}
+
+    /* Theme testimonials CSS */
+    .testimonials .feedback p {padding: 0;}
+
+    /* Theme contact-us CSS */
+    .contact-us .sec-header-sub {margin-bottom: 2rem !important;}
+
+}
+
+/*-----------------------------------------------------------
+    02.  Small devices (landscape phones, 576px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 576px) and (max-width: 767.98px) {
+
+    /* Theme main-nav CSS */
+    .main-nav .navbar .nav-item.active .nav-link:after, .main-nav .navbar .nav-item .nav-link:hover:after {width: 100%;}
+
+    .main-nav .navbar .nav-item .nav-link:after {left: 0;}
+
+    /* Theme about CSS */
+    .about .info li p {margin-bottom: 5px;}
+
+    .about .sec-header-sub {padding-top: 1rem;margin-bottom: 1.5rem !important;}
+
+    /* Theme testimonials CSS */
+    .testimonials .feedback p {padding: 0 3rem;}
+
+    /* Theme contact-us CSS */
+    .contact-us .sec-header-sub {margin-bottom: 2rem !important;}
+
+}
+
+/*-----------------------------------------------------------
+    03.  Medium devices (tablets, 768px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Theme main-nav CSS */
+    .main-nav .navbar .nav-item.active .nav-link:after, .main-nav .navbar .nav-item .nav-link:hover:after {width: 100%;}
+
+    .main-nav .navbar .nav-item .nav-link:after {left: 0;}
+
+    /* Theme about CSS */
+    .about .sec-header-sub {padding-top: 1rem;margin-bottom: 1.5rem !important;}
+
+    /* Theme testimonials CSS */
+    .testimonials .feedback p {padding: 0 3rem;}
+
+}
+
+/*-----------------------------------------------------------
+    04.  Large devices (desktops, 992px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/*-----------------------------------------------------------
+    05.  Extra large devices (large desktops, 1200px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 1200px) {
+}
