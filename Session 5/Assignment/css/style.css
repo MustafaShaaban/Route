@@ -10,6 +10,17 @@
         - Typography
         - Scroll
         - Buttons
+    02. Theme main-nav CSS
+    03. Theme intro CSS
+    04. Theme about CSS
+    05. Theme services CSS
+    06. Theme statistics CSS
+    07. Theme portfolio CSS
+    08. Theme blog CSS
+    09. Theme testimonials
+    10. Theme contact-us CSS
+    11. Theme footer CSS
+    12. Theme groups CSS
 
 -----------------------------------------------------------------------------------*/
 
@@ -29,34 +40,10 @@
 }
 
 .wl-shadow {
+    -webkit-box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
     box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
 }
 
-.sec-header-main,
-.sec-header-sub {
-    position: relative;
-}
-
-.sec-header-main:after,
-.sec-header-sub:after {
-    content: "";
-    position: absolute;
-    background-color: #0078ff;
-}
-
-.sec-header-main:after {
-    left: calc(50% - 20px);
-    bottom: 0;
-    height: 5px;
-    width: 40px;
-}
-
-.sec-header-sub:after {
-    left: 0;
-    height: 3px;
-    width: 100px;
-    bottom: -12px;
-}
 
 /*---------- Typography ----------*/
 .p-normal {
@@ -80,31 +67,46 @@ h3 {font-size: 3rem}
 
 h5 {font-size: 2rem}
 
+.sec-header-main,
+.sec-header-sub {position: relative;}
+
+.sec-header-main:after,
+.sec-header-sub:after {
+    content: "";
+    position: absolute;
+    background-color: #0078ff;
+}
+
+.sec-header-main:after {
+    left: calc(50% - 20px);
+    bottom: 0;
+    height: 5px;
+    width: 40px;
+}
+
+.sec-header-sub:after {
+    left: 0;
+    height: 3px;
+    width: 100px;
+    bottom: -12px;
+}
 
 /*---------- Scroll ----------*/
 body::-webkit-scrollbar {width: 5px;}
 
-body::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);}
+body::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);}
 
 body::-webkit-scrollbar-thumb {background-color: #0078ff; border-radius: 5px;}
 
 
-/*---------- Buttons ----------*/
-
 /*----------------------------------------
-    01.  Theme defaults CSS
+    02.  Theme main-nav CSS here
 ----------------------------------------*/
-.main-nav .navbar {
-    z-index: 10;
-}
+.main-nav .navbar {z-index: 10;}
 
-.main-nav .navbar .navbar-brand {
-    font-size: 1.6rem;
-}
+.main-nav .navbar .navbar-brand {font-size: 1.6rem;}
 
-.main-nav .navbar .nav-item .nav-link {
-    position: relative;
-}
+.main-nav .navbar .nav-item .nav-link {position: relative;}
 
 .main-nav .navbar .nav-item .nav-link:after {
     content: '';
@@ -114,16 +116,17 @@ body::-webkit-scrollbar-thumb {background-color: #0078ff; border-radius: 5px;}
     left: .5rem;
     height: 2px;
     background-color: #fff;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
 
 .main-nav .navbar .nav-item.active .nav-link:after,
-.main-nav .navbar .nav-item .nav-link:hover:after {
-    width: calc(100% - 1rem);
-}
+.main-nav .navbar .nav-item .nav-link:hover:after {width: calc(100% - 1rem);}
+
 
 /*----------------------------------------
-    01.  Theme defaults CSS
+    03.  Theme intro CSS here
 ----------------------------------------*/
 .intro {
     position: relative;
@@ -142,79 +145,69 @@ body::-webkit-scrollbar-thumb {background-color: #0078ff; border-radius: 5px;}
     opacity: .9;
 }
 
-.intro header {
-    position: relative;
-    z-index: 1;
-}
+.intro header {position: relative;z-index: 1;}
 
-.intro header p {
-    font-size: 2.5rem;
-}
+.intro header p {font-size: 2.5rem;}
 
 
 /*----------------------------------------
-    01.  Theme defaults CSS
+    04.  Theme about CSS here
 ----------------------------------------*/
-.about .skills .skill-progress .progress {
-    background-color: #cde1f8;
-    height: .7rem;
-}
+.about .skills .skill-progress .progress {background-color: #cde1f8;height: .7rem;}
 
-.services .services-body .card {
-    -webkit-border-radius: 1rem;-moz-border-radius: 1rem;border-radius: 1rem;
-}
+
+/*----------------------------------------
+    05.  Theme services CSS here
+----------------------------------------*/
+.services .services-body .card {border-radius: 1rem;}
 
 .services .services-body .card .ion-icon {
     font-size: 4rem;
     padding: 20px;
     border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 10px #0078ff;
     box-shadow: 0 0 0 10px #0078ff;
 }
 
 .services .services-body .card:hover .ion-icon {
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
     color: #fff;
     background-color: #0078ff;
+    -webkit-box-shadow: 0 0 0 10px #cde1f8;
     box-shadow: 0 0 0 10px #cde1f8;
 }
 
-.services .services-body .card .card-subtitle {
-    font-size: 1.4rem;
-}
+.services .services-body .card .card-subtitle {font-size: 1.4rem;}
+
 
 /*----------------------------------------
-    01.  Theme defaults CSS
+    06.  Theme statistics CSS here
 ----------------------------------------*/
-.statistics {
-    background: url("../img/counters-bg.jpg");
-}
+.statistics {background: url("../img/counters-bg.jpg");}
 
 .statistics .ion-icon {
     font-size: 2rem;
     padding: 15px;
     border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 10px #cde1f8;
     box-shadow: 0 0 0 10px #cde1f8;
 }
 
-.statistics .card .card-subtitle {
-    font-size: 2rem;
-    font-weight: 400;
-}
+.statistics .card .card-subtitle {font-size: 2rem;font-weight: 400;}
+
 
 /*----------------------------------------
-    01.  Theme defaults CSS
+    07.  Theme portfolio CSS here
 ----------------------------------------*/
-.portfolio .card .card-link {
-    top: 25px;
-    right: 15px;
-}
+.portfolio .card .card-link {top: 25px;right: 15px;}
 
-.portfolio .card .card-link .ion-icon {
-    font-size: 2.5rem;
-}
+.portfolio .card .card-link .ion-icon {font-size: 2.5rem;}
+
 
 /*----------------------------------------
-    01.  Theme defaults CSS
+    08.  Theme blog CSS here
 ----------------------------------------*/
 .blog .blog-content .card h5 {
     font-size: 1.3rem;
@@ -226,6 +219,8 @@ body::-webkit-scrollbar-thumb {background-color: #0078ff; border-radius: 5px;}
     position: absolute;
     top: 0;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: inline-block;
     color: #fff;
@@ -238,66 +233,101 @@ body::-webkit-scrollbar-thumb {background-color: #0078ff; border-radius: 5px;}
 
 .blog .blog-content .card .card-footer .avatar {
     width: 32px;
-    height: 32px;
-    -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;
+    height: 32px;border-radius: 50%;
     overflow: hidden;
 }
 
-.blog .blog-content .card .card-footer p {
-    line-height: 2;
-}
+.blog .blog-content .card .card-footer p {line-height: 2;}
+
 
 /*----------------------------------------
-    01.  Theme defaults CSS
+    09.  Theme testimonials CSS here
 ----------------------------------------*/
-.testimonials {
-    background: url("../img/overlay-bg.jpg");
-    padding: 100px 0 !important;
-}
-.testimonials .carousel-indicators {
-    bottom: 0;
-    margin: 0;
-}
+.testimonials {background: url("../img/overlay-bg.jpg");padding: 100px 0 !important;}
+
+.testimonials .carousel-indicators {bottom: 0;margin: 0;}
 
 .testimonials .carousel-indicators li {
     width: 20px;
     height: 7px;
     background: #cde1f8;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
-.testimonials .carousel-indicators li.active {
-    background-color: #1B1B1B;
-    width: 25px;
-}
-.testimonials .user img {
-    -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;
-}
+
+.testimonials .carousel-indicators li.active {background-color: #1b1b1b;width: 25px;}
+
+.testimonials .user img {border-radius: 50%;}
 
 .testimonials .user .author {
     font-weight: 600;
     margin: 1rem 0;
     font-size: 1.4rem;
 }
-.testimonials .feedback p {
-    padding: 0 13rem;
-}
 
+.testimonials .feedback p {padding: 0 13rem;}
 
 
 /*----------------------------------------
-    01.  Theme defaults CSS
+    10.  Theme contact-us CSS here
 ----------------------------------------*/
-.contact-us {
-    background: url("../img/overlay-bg.jpg");
+.contact-us {background: url("../img/overlay-bg.jpg");
 }
 
-.contact-us .contact-card {
-    position: relative;
-    z-index: 2;
+.contact-us .contact-card {position: relative;z-index: 2;
 }
+
+.contact-us form .btn-submit .btn {
+    font-size: 1.2rem;
+    background: #0078ff;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    border-radius: 5rem;
+}
+
+.contact-us .socials a {
+    height: 40px;
+    width: 40px;
+    font-size: 1.7rem;
+    border-radius: 50%;
+    line-height: 1.4;
+    margin: 0 10px 0 0;
+    -webkit-box-shadow: 0 0 0 3px #0078ff;
+    box-shadow: 0 0 0 3px #0078ff;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    color: #1e1e1e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.contact-us .socials a:hover {
+    text-decoration: none;
+    background-color: #0078ff;
+    -webkit-box-shadow: 0 0 0 3px #cde1f8;
+    box-shadow: 0 0 0 3px #cde1f8;
+    color: #fff;
+}
+
 
 /*----------------------------------------
-    01.  Theme defaults CSS
+    11.  Theme footer CSS here
+----------------------------------------*/
+footer {background: #0062d3;}
+
+
+/*----------------------------------------
+    12.  Theme groups CSS
 ----------------------------------------*/
 .intro, .statistics, .testimonials, .contact-us {
     position: relative;
@@ -315,12 +345,4 @@ body::-webkit-scrollbar-thumb {background-color: #0078ff; border-radius: 5px;}
     width: 100%;
     height: 100%;
     background-color: rgba(0, 120, 255, .7);
-}
-
-
-/*----------------------------------------
-    01.  Theme defaults CSS
-----------------------------------------*/
-footer {
-    background: #0062d3;
 }
