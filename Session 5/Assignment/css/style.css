@@ -36,28 +36,33 @@
 .sec-header-sub {
     position: relative;
 }
+
 .sec-header-main:after,
 .sec-header-sub:after {
     content: "";
     position: absolute;
     background-color: #0078ff;
 }
+
 .sec-header-main:after {
     left: calc(50% - 20px);
     bottom: 0;
     height: 5px;
     width: 40px;
 }
+
 .sec-header-sub:after {
     left: 0;
     height: 3px;
     width: 100px;
     bottom: -12px;
 }
+
 /*---------- Typography ----------*/
 .p-normal {
     font-size: 1.1rem;
 }
+
 .card-h2 {
     font-size: 1.2rem;
     margin-bottom: .25rem;
@@ -86,15 +91,46 @@ body::-webkit-scrollbar-thumb {background-color: #0078ff; border-radius: 5px;}
 
 /*---------- Buttons ----------*/
 
-nav {
-    z-index: 1;
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
+.main-nav .navbar {
+    z-index: 10;
 }
 
+.main-nav .navbar .navbar-brand {
+    font-size: 1.6rem;
+}
+
+.main-nav .navbar .nav-item .nav-link {
+    position: relative;
+}
+
+.main-nav .navbar .nav-item .nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: .5rem;
+    height: 2px;
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.main-nav .navbar .nav-item.active .nav-link:after,
+.main-nav .navbar .nav-item .nav-link:hover:after {
+    width: calc(100% - 1rem);
+}
+
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
 .intro {
     position: relative;
     height: 100vh;
     background: url("../img/intro-bg.jpg");
 }
+
 .intro:before {
     content: "";
     position: absolute;
@@ -105,39 +141,169 @@ nav {
     background-color: rgba(0, 0, 0, .6);
     opacity: .9;
 }
+
 .intro header {
     position: relative;
     z-index: 1;
 }
 
+.intro header p {
+    font-size: 2.5rem;
+}
+
+
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
 .about .skills .skill-progress .progress {
     background-color: #cde1f8;
     height: .7rem;
 }
 
+.services .services-body .card {
+    -webkit-border-radius: 1rem;-moz-border-radius: 1rem;border-radius: 1rem;
+}
+
+.services .services-body .card .ion-icon {
+    font-size: 4rem;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #0078ff;
+}
+
+.services .services-body .card:hover .ion-icon {
+    transition: all .5s ease-in-out;
+    color: #fff;
+    background-color: #0078ff;
+    box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.services .services-body .card .card-subtitle {
+    font-size: 1.4rem;
+}
+
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
 .statistics {
     background: url("../img/counters-bg.jpg");
 }
 
-.testimonials {
-    background: url("../img/overlay-bg.jpg");
+.statistics .ion-icon {
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #cde1f8;
 }
 
+.statistics .card .card-subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
+.portfolio .card .card-link {
+    top: 25px;
+    right: 15px;
+}
+
+.portfolio .card .card-link .ion-icon {
+    font-size: 2.5rem;
+}
+
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
+.blog .blog-content .card h5 {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+    padding-top: 10px;
+}
+
+.blog .blog-content .card .card-body .label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    color: #fff;
+    padding: 8px 15px;
+    background-color: #0078ff;
+    border-radius: 4px;
+    font-size: .7rem;
+    letter-spacing: .1px;
+}
+
+.blog .blog-content .card .card-footer .avatar {
+    width: 32px;
+    height: 32px;
+    -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;
+    overflow: hidden;
+}
+
+.blog .blog-content .card .card-footer p {
+    line-height: 2;
+}
+
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
+.testimonials {
+    background: url("../img/overlay-bg.jpg");
+    padding: 100px 0 !important;
+}
+.testimonials .carousel-indicators {
+    bottom: 0;
+    margin: 0;
+}
+
+.testimonials .carousel-indicators li {
+    width: 20px;
+    height: 7px;
+    background: #cde1f8;
+    transition: all .5s ease-in-out;
+}
+.testimonials .carousel-indicators li.active {
+    background-color: #1B1B1B;
+    width: 25px;
+}
+.testimonials .user img {
+    -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;
+}
+
+.testimonials .user .author {
+    font-weight: 600;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+.testimonials .feedback p {
+    padding: 0 13rem;
+}
+
+
+
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
 .contact-us {
     background: url("../img/overlay-bg.jpg");
 }
+
 .contact-us .contact-card {
     position: relative;
     z-index: 2;
 }
-.intro, .statistics, .testimonials, .contact-us {
-    background-size: cover;
-    background-position: center;
-}
 
-.statistics, .testimonials, .contact-us {
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
+.intro, .statistics, .testimonials, .contact-us {
     position: relative;
     z-index: 1;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -152,6 +318,9 @@ nav {
 }
 
 
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
 footer {
     background: #0062d3;
 }
