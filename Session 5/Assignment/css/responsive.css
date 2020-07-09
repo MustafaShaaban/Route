@@ -1,0 +1,46 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Session 5 Assignment 5 - Responsive Style File
+    Reference: Bootstrap 4 Media queries  https://getbootstrap.com/docs/4.1/layout/overview
+    Version: 1.0
+    Author: Mustafa Shaaban
+
+    CSS INDEX
+    ===================
+    01. Extra small devices (portrait phones, less than 576px)
+
+    02. Small devices (landscape phones, 576px and up)
+
+    03. Medium devices (tablets, 768px and up)
+
+    04. Large devices (desktops, 992px and up)
+
+    05. Extra large devices (large desktops, 1200px and up)
+
+
+-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+    01.  Extra small devices (portrait phones, less than 576px)
+-----------------------------------------------------------*/
+@media all and (max-width: 575.98px) {}
+
+/*-----------------------------------------------------------
+    02.  Small devices (landscape phones, 576px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 576px) and (max-width: 767.98px) {}
+
+/*-----------------------------------------------------------
+    03.  Medium devices (tablets, 768px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 768px) and (max-width: 991.98px) {}
+
+/*-----------------------------------------------------------
+    04.  Large devices (desktops, 992px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 992px) and (max-width: 1199.98px) {}
+
+/*-----------------------------------------------------------
+    05.  Extra large devices (large desktops, 1200px and up)
+-----------------------------------------------------------*/
+@media all and (min-width: 1200px) {}
