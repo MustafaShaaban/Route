@@ -356,9 +356,9 @@ const solution7 = {
             }
 
             if (vowels.includes($this.value)) {
-                UICtr.q7.solution.innerHTML = `The character you entered <strong class="text-success">${$this.value.toUpperCase()}</strong> is Vowel`;
+                UICtr.q7.solution.innerHTML = `The character you entered <strong class="text-success">${$this.value.toUpperCase()} is Vowel</strong>`;
             } else {
-                UICtr.q7.solution.innerHTML = `The character you entered <strong class="text-danger">${$this.value.toUpperCase()}</strong> isn't vowel`;
+                UICtr.q7.solution.innerHTML = `The character you entered <strong class="text-danger">${$this.value.toUpperCase()}  is Consonant</strong>`;
             }
 
         });
