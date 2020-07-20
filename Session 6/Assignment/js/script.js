@@ -7,10 +7,10 @@
  *   OBJECTS INDEX
  *   ===================
  *   01. UICtr
- *      The object which contain the most important elements to be loaded once
+ *      The object contains the most important elements to be loaded once
  *
  *   02. main
- *      The object which contain the front page functions
+ *      The object contains the front page functions
  *
  *   03. solution*
  *
@@ -51,8 +51,8 @@ const main = {
 };
 
 /**
- *
- *
+ * The object which control the app UI
+ * collecting all app elements at one object to be manageable
  */
 const UICtr = {
     q1: {
@@ -131,7 +131,7 @@ const UICtr = {
         input4: main._('#calcGradeMathematics'),
         input5: main._('#calcGradeComputer'),
         btn: main._('#calcGradeBtn'),
-        solution: main._('.result-14')
+        solution: main._('.result-14 .output')
     },
     q15: {
         input1: main._('#simpleCalcInput1'),
@@ -144,6 +144,9 @@ const UICtr = {
 
 /**
  * 1- Write a program that allow to user enter number then print it.
+ *
+ * @example Input: 5
+ * @return Output: 5
  *
  * @type {{init: solution1.init, getOutput: solution1.getOutput}}
  */
@@ -162,13 +165,16 @@ const solution1 = {
                 return
             }
 
-            UICtr.q1.solution.innerHTML = Number($this.value);
+            UICtr.q1.solution.innerHTML = `Your number is: <strong>${Number($this.value)}</strong>`;
         });
     }
 };
 
 /**
  * 2- Write a program that take number from user then print yes if that number can divide by 3 and 4 otherwise print no.
+ *
+ * @example Input: 12
+ * @return Output: Yes
  *
  * @type {{init: solution2.init, getOutput: solution2.getOutput}}
  */
@@ -188,9 +194,9 @@ const solution2 = {
             }
 
             if ((Number($this.value) % 3) === 0 || (Number($this.value) % 4) === 0) {
-                UICtr.q2.solution.innerHTML = `<span class="text-success">Yes, this number <strong>${$this.value}</strong> is valid.</span>`;
+                UICtr.q2.solution.innerHTML = `Yes, this number <strong class="text-success">${$this.value}</strong> is valid.`;
             } else {
-                UICtr.q2.solution.innerHTML = `<span class="text-danger">No!, this number <strong>${$this.value}</strong> isn't valid.</span>`;
+                UICtr.q2.solution.innerHTML = `No!, this number <strong class="text-danger">${$this.value}</strong> isn't valid.`;
             }
 
         });
@@ -199,6 +205,9 @@ const solution2 = {
 
 /**
  * 3- Write a program that allows the user to insert 2 integers then print the max.
+ *
+ * @example Input: 3 5
+ * @return Output: 5
  *
  * @type {{init: solution3.init, getOutput: solution3.getOutput}}
  */
@@ -216,15 +225,17 @@ const solution3 = {
             if (firstInput === '' || secondInput === '') {
                 UICtr.q3.solution.innerHTML = '';
             } else {
-                UICtr.q3.solution.innerHTML = Math.max(Number(firstInput), Number(secondInput));
+                UICtr.q3.solution.innerHTML = `The maximum number is: <strong>${Math.max(Number(firstInput), Number(secondInput))}</strong>`;
             }
-
         });
     }
 };
 
 /**
  * 4- Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
+ *
+ * @example Input: -5
+ * @return Output: negative
  *
  * @type {{init: solution4.init, getOutput: solution4.getOutput}}
  */
@@ -246,9 +257,9 @@ const solution4 = {
             if (Number($this.value) === 0) {
                 UICtr.q4.solution.innerHTML = `0 is neither positive nor negative`;
             } else if (Number($this.value) > 0) {
-                UICtr.q4.solution.innerHTML = `The number you entered is <span class="text-success">Positive</span>`;
+                UICtr.q4.solution.innerHTML = `The number you entered is <strong class="text-success">Positive</strong>`;
             } else if (Number($this.value) < 0) {
-                UICtr.q4.solution.innerHTML = `The number you entered is <span class="text-danger">Negative</span>`;
+                UICtr.q4.solution.innerHTML = `The number you entered is <strong class="text-danger">Negative</strong>`;
             }
 
         });
@@ -257,6 +268,9 @@ const solution4 = {
 
 /**
  * 5- Write a program that take 3 integers from user then print the max element and the min element.
+ *
+ * @example Input:7,8,5
+ * @return Output: max element = 8 / min element = 5
  *
  * @type {{init: solution5.init, getOutput: solution5.getOutput}}
  */
@@ -276,8 +290,8 @@ const solution5 = {
                 UICtr.q5.solutionMax.innerHTML = '';
                 UICtr.q5.solutionMin.innerHTML = '';
             } else {
-                UICtr.q5.solutionMax.innerHTML = `Maximum number is ${Math.max(Number(firstInput), Number(secondInput), Number(thirdInput))}`;
-                UICtr.q5.solutionMin.innerHTML = `Minimum number is ${Math.min(Number(firstInput), Number(secondInput), Number(thirdInput))}`;
+                UICtr.q5.solutionMax.innerHTML = `Maximum number is <strong class="text-success">${Math.max(Number(firstInput), Number(secondInput), Number(thirdInput))}</strong>`;
+                UICtr.q5.solutionMin.innerHTML = `Minimum number is <strong class="text-danger">${Math.min(Number(firstInput), Number(secondInput), Number(thirdInput))}</strong>`;
             }
 
         });
@@ -286,6 +300,9 @@ const solution5 = {
 
 /**
  * 6- Write a program that allows the user to insert integer number then check If a number is oven or odd.
+ *
+ * @example Input: 8
+ * @return Output: even
  *
  * @type {{init: solution6.init, getOutput: solution6.getOutput}}
  */
@@ -316,6 +333,9 @@ const solution6 = {
 
 /**
  * 7- Write a program that take character from user then if it is vowel chars (a,e,I,o,u) then print vowel otherwise print consonant.
+ *
+ * @example Input: O
+ * @return Output: vowel
  *
  * @type {{init: solution7.init, getOutput: solution7.getOutput}}
  */
@@ -348,7 +368,10 @@ const solution7 = {
 /**
  * 8- Write a program that allows user to insert integer then print all numbers between 1 to that’s number.
  *
- * @type {{init: solution8.init, getOutput(): void}}
+ * @example Input: 5
+ * @return Output: [1, 2, 3, 4, 5]
+ *
+ * @type {{init: solution8.init, getOutput: solution8.getOutput}}
  */
 const solution8 = {
     init: () => {
@@ -392,6 +415,9 @@ const solution8 = {
 /**
  * 9- Write a program that allows user to insert integer then print a multiplication table up to 12.
  *
+ * @example Input: 5
+ * @return Output: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+ *
  * @type {{init: solution9.init, getOutput(): void}}
  */
 const solution9 = {
@@ -423,6 +449,9 @@ const solution9 = {
 
 /**
  * 10- Write a program that allows to user to insert number then print all even numbers between 1 to this number.
+ *
+ * @example Input: 15
+ * @return Output: [2, 4, 6, 8, 10, 12, 14]
  *
  * @type {{init: solution10.init, getOutput(): void}}
  */
@@ -473,6 +502,9 @@ const solution10 = {
 /**
  * 11- Write a program that take two integers then print the power.
  *
+ * @example Input: 95, 76, 58, 90, 89
+ * @return Total marks = 435 / Average Marks = 87 / Percentage = 87%
+ *
  * @type {{init: solution11.init, getOutput(): void}}
  */
 const solution11 = {
@@ -498,6 +530,9 @@ const solution11 = {
 
 /**
  * 12- Write a program to enter marks of five subjects and calculate total, average and percentage.
+ *
+ * @example Input: Month Number: 1
+ * @return Output: Days in Month: 31
  *
  * @type {{init: solution12.init, calcAvg: solution12.calcAvg, calcPerc: (function(*=, *=): string), getOutput: solution12.getOutput}}
  */
@@ -560,6 +595,9 @@ const solution12 = {
 /**
  * 13- Write a program to input month number and print number of days in that month.
  *
+ * @example
+ * @return
+ *
  * @type {{init: solution13.init, getDays: (function(*): number), getOutput: solution13.getOutput}}
  */
 const solution13 = {
@@ -598,6 +636,14 @@ const solution13 = {
 
 /**
  * 14- Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer , Find percentage and grade.
+ *
+ * @example
+ * @return Percentage >= 90%: Grad A
+ *   Percentage >= 80%: Grad B
+ *   Percentage >= 70%: Grad C
+ *   Percentage >= 60%: Grad D
+ *   Percentage >= 40%: Grad E
+ *   Percentage < 40%: Grad F
  *
  * @type {{init: solution14.init}}
  */
@@ -660,6 +706,9 @@ const solution14 = {
 
 /**
  * 15- Write a program to create Simple Calculator Using switch case.
+ *
+ * @example Input: 5 + 5
+ * @return Output: 10
  *
  * @type {{init: solution15.init, calc: (function(*=, *=, *=): number), getOutput: solution15.getOutput}}
  */
