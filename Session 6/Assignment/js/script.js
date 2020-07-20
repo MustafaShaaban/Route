@@ -50,6 +50,10 @@ const main = {
     }
 };
 
+/**
+ *
+ *
+ */
 const UICtr = {
     q1: {
         input: main._('#inputPrint'),
@@ -139,6 +143,7 @@ const UICtr = {
 };
 
 /**
+ * 1- Write a program that allow to user enter number then print it.
  *
  * @type {{init: solution1.init, getOutput: solution1.getOutput}}
  */
@@ -163,6 +168,7 @@ const solution1 = {
 };
 
 /**
+ * 2- Write a program that take number from user then print yes if that number can divide by 3 and 4 otherwise print no.
  *
  * @type {{init: solution2.init, getOutput: solution2.getOutput}}
  */
@@ -184,7 +190,7 @@ const solution2 = {
             if ((Number($this.value) % 3) === 0 || (Number($this.value) % 4) === 0) {
                 UICtr.q2.solution.innerHTML = `<span class="text-success">Yes, this number <strong>${$this.value}</strong> is valid.</span>`;
             } else {
-                UICtr.q2.solution.innerHTML = `<span class="text-danger">Sorry!, this number <strong>${$this.value}</strong> isn't valid.</span>`;
+                UICtr.q2.solution.innerHTML = `<span class="text-danger">No!, this number <strong>${$this.value}</strong> isn't valid.</span>`;
             }
 
         });
@@ -192,6 +198,7 @@ const solution2 = {
 };
 
 /**
+ * 3- Write a program that allows the user to insert 2 integers then print the max.
  *
  * @type {{init: solution3.init, getOutput: solution3.getOutput}}
  */
@@ -217,6 +224,7 @@ const solution3 = {
 };
 
 /**
+ * 4- Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
  *
  * @type {{init: solution4.init, getOutput: solution4.getOutput}}
  */
@@ -248,6 +256,7 @@ const solution4 = {
 };
 
 /**
+ * 5- Write a program that take 3 integers from user then print the max element and the min element.
  *
  * @type {{init: solution5.init, getOutput: solution5.getOutput}}
  */
@@ -276,6 +285,7 @@ const solution5 = {
 };
 
 /**
+ * 6- Write a program that allows the user to insert integer number then check If a number is oven or odd.
  *
  * @type {{init: solution6.init, getOutput: solution6.getOutput}}
  */
@@ -305,6 +315,7 @@ const solution6 = {
 };
 
 /**
+ * 7- Write a program that take character from user then if it is vowel chars (a,e,I,o,u) then print vowel otherwise print consonant.
  *
  * @type {{init: solution7.init, getOutput: solution7.getOutput}}
  */
@@ -335,6 +346,7 @@ const solution7 = {
 };
 
 /**
+ * 8- Write a program that allows user to insert integer then print all numbers between 1 to that’s number.
  *
  * @type {{init: solution8.init, getOutput(): void}}
  */
@@ -378,6 +390,7 @@ const solution8 = {
 };
 
 /**
+ * 9- Write a program that allows user to insert integer then print a multiplication table up to 12.
  *
  * @type {{init: solution9.init, getOutput(): void}}
  */
@@ -409,6 +422,7 @@ const solution9 = {
 };
 
 /**
+ * 10- Write a program that allows to user to insert number then print all even numbers between 1 to this number.
  *
  * @type {{init: solution10.init, getOutput(): void}}
  */
@@ -457,6 +471,7 @@ const solution10 = {
 };
 
 /**
+ * 11- Write a program that take two integers then print the power.
  *
  * @type {{init: solution11.init, getOutput(): void}}
  */
@@ -482,6 +497,7 @@ const solution11 = {
 };
 
 /**
+ * 12- Write a program to enter marks of five subjects and calculate total, average and percentage.
  *
  * @type {{init: solution12.init, calcAvg: solution12.calcAvg, calcPerc: (function(*=, *=): string), getOutput: solution12.getOutput}}
  */
@@ -542,6 +558,7 @@ const solution12 = {
 };
 
 /**
+ * 13- Write a program to input month number and print number of days in that month.
  *
  * @type {{init: solution13.init, getDays: (function(*): number), getOutput: solution13.getOutput}}
  */
@@ -580,6 +597,7 @@ const solution13 = {
 };
 
 /**
+ * 14- Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer , Find percentage and grade.
  *
  * @type {{init: solution14.init}}
  */
@@ -607,7 +625,7 @@ const solution14 = {
             }
 
             let total = firstInput + secondInput + thirdInput + fourthInput + fifthInput,
-                grade   = solution14.getGrade(total);
+                grade = solution14.getGrade(total);
 
             UICtr.q14.solution.innerHTML = `Your grade is <strong>${grade}</strong>`;
 
@@ -619,7 +637,7 @@ const solution14 = {
     },
 
     getGrade: (sub) => {
-        let perc = solution14.calcPerc(sub),
+        let perc  = solution14.calcPerc(sub),
             grade = '';
 
         if (perc >= 90) {
@@ -641,6 +659,7 @@ const solution14 = {
 };
 
 /**
+ * 15- Write a program to create Simple Calculator Using switch case.
  *
  * @type {{init: solution15.init, calc: (function(*=, *=, *=): number), getOutput: solution15.getOutput}}
  */
@@ -694,7 +713,6 @@ const solution15 = {
         return result;
     }
 };
-
 
 window.onload = () => {
     main.init();
