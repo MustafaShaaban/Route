@@ -1,0 +1,88 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Session 6 Assignment 6 - Main Style File
+    Version: 1.0
+    Author: Mustafa Shaaban
+
+    CSS INDEX
+    ===================
+    01. Theme defaults CSS
+
+-----------------------------------------------------------------------------------*/
+
+/*----------------------------------------
+    01.  Theme defaults CSS
+----------------------------------------*/
+
+/* ====== Aside menu ====== */
+.menu {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow: auto;
+}
+
+.we-nav {
+    color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    transition: .2s all ease-in-out;
+}
+
+.we-nav:hover,
+.we-nav.active, .we-nav.active:hover {
+    color: #fff;
+    background-color: #007bff;
+    padding-left: 2.5rem;
+    border-left: 5px solid #f8f9fa;
+}
+
+.we-nav.active {
+    position: relative;
+}
+
+.we-nav.active:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(50%);
+    border: 15px solid #f8f9fa;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transition: .2s all ease-in-out;
+}
+
+/* ====== body content ====== */
+h3 {
+    position: relative;
+    padding-bottom: .6rem;
+}
+
+h3:after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background-color: #007bff;
+    bottom: 0;
+    left: 0;
+}
+
+.answer-body {
+    height: 100vh;
+    overflow: auto;
+}
+
+
+.question, .solution, .result {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    margin-top: .8rem;
+}
