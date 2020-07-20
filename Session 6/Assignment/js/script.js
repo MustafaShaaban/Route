@@ -397,11 +397,11 @@ const solution8 = {
             }
 
             if (Number($this.value) > 0) {
-                for (i = 1; i < maxNumber; i++) {
+                for (i = 2; i < maxNumber; i++) {
                     numbers += maxNumber === i + 1 ? `${i}` : `${i}, `;
                 }
             } else {
-                for (i = 1; i > maxNumber; i--) {
+                for (i = 2; i > maxNumber; i--) {
                     numbers += maxNumber === i - 1 ? `${i}` : `${i}, `;
                 }
             }
@@ -610,7 +610,7 @@ const solution13 = {
             e.preventDefault();
             let $this = e.currentTarget;
 
-            if (Number($this.value) <= 0 || solution13.getDays(Number($this.value)) === 0) {
+            if (Number($this.value) <= 0 || Number($this.value) > 12 || solution13.getDays(Number($this.value)) === 0) {
                 UICtr.q13.solution.innerHTML = '';
                 return;
             }
