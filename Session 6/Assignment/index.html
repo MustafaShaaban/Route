@@ -61,6 +61,7 @@
                                    aria-controls="v-pills-q15" aria-selected="false">Question 15</a>
                             </div>
                         </div>
+
                         <div class="col-10 offset-2">
                             <div class="tab-content" id="v-pills-tabContent">
                                 <div class="tab-pane fade show active" id="v-pills-q1" role="tabpanel" aria-labelledby="v-pills-q1-tab">
@@ -335,19 +336,14 @@
                                                         <div class="col-md-3">
                                                             <div class="form-group">
                                                                 <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Write a number Ex. 15">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="form-group">
-                                                                <button type="button" class="form-control btn btn-info">Print</button>
+                                                                       class="form-control" name="" id="evenNumbersBetween" placeholder="Write a number Ex. 15">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
 
-                                                <div class="result">
-                                                    <p class="output">2 4 6 8 10 12 14</p>
+                                                <div class="result result-10">
+                                                    <p class="output"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -365,23 +361,22 @@
                                                         <div class="col-md-3">
                                                             <div class="form-group">
                                                                 <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Write a number Ex. 4">
+                                                                       class="form-control" name="" id="inputPowerNumber" placeholder="Write a number Ex. 4">
                                                             </div>
                                                             <div class="form-group">
                                                                 <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Write the power number Ex. 3">
+                                                                       class="form-control" name="" id="inputPowerPow"
+                                                                       placeholder="Write the power number Ex. 3">
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-3">
                                                             <div class="form-group">
-                                                                <button type="button" class="form-control btn btn-info">Print</button>
+                                                                <button type="button" id="inputPowerBtn" class="form-control btn btn-info">Print</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
 
-                                                <div class="result">
-                                                    <p class="output">64</p>
+                                                <div class="result result-11">
+                                                    <p class="output"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -398,40 +393,48 @@
                                             <div class="solution">
                                                 <form action="">
                                                     <div class="row">
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Subject 1">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Subject 2">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Subject 3">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Subject 4">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Subject 5">
+                                                                       class="form-control" name="" id="avgInputSub1" placeholder="Subject 1">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <button type="button" class="form-control btn btn-info">Print</button>
+                                                                <input type="number"
+                                                                       class="form-control" name="" id="avgInputSub2" placeholder="Subject 2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input type="number"
+                                                                       class="form-control" name="" id="avgInputSub3" placeholder="Subject 3">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input type="number"
+                                                                       class="form-control" name="" id="avgInputSub4" placeholder="Subject 4">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input type="number"
+                                                                       class="form-control" name="" id="avgInputSub5" placeholder="Subject 5">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <button type="button" id="avgInputBtn" class="form-control btn btn-info">Print</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
 
-                                                <div class="result">
-                                                    <p class="output">Total marks</p>
-                                                    <p class="output">Average Marks</p>
-                                                    <p class="output">Percentage</p>
+                                                <div class="result result-12">
+                                                    <p class="output total-marks">Total marks: <strong></strong></p>
+                                                    <p class="output avg-marks">Average Marks: <strong></strong></p>
+                                                    <p class="output perc">Percentage: <strong></strong></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -451,19 +454,15 @@
                                                         <div class="col-md-3">
                                                             <div class="form-group">
                                                                 <input type="number"
-                                                                       class="form-control" name="" id="" min="1" max="12" placeholder="Write a number Ex. 5">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="form-group">
-                                                                <button type="button" class="form-control btn btn-info">Print</button>
+                                                                       class="form-control" name="" id="numberOfDaysInput" min="1" max="12"
+                                                                       placeholder="Write a number Ex. 5">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
 
-                                                <div class="result">
-                                                    <p class="output">days in month is 31</p>
+                                                <div class="result result-13">
+                                                    <p class="output"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -489,38 +488,47 @@
                                             <div class="solution">
                                                 <form action="">
                                                     <div class="row">
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Physics">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Chemistry">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Biology">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Mathematics">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Computer">
+                                                                       class="form-control" name="" id="calcGradePhysics" placeholder="Physics">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <button type="button" class="form-control btn btn-info">Print</button>
+                                                                <input type="number"
+                                                                       class="form-control" name="" id="calcGradeChemistry" placeholder="Chemistry">
                                                             </div>
                                                         </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input type="number"
+                                                                       class="form-control" name="" id="calcGradeBiology" placeholder="Biology">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input type="number"
+                                                                       class="form-control" name="" id="calcGradeMathematics" placeholder="Mathematics">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input type="number"
+                                                                       class="form-control" name="" id="calcGradeComputer" placeholder="Computer">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <button type="button" id="calcGradeBtn" class="form-control btn btn-info">Print</button>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </form>
 
-                                                <div class="result">
-                                                    <p class="output">5</p>
+                                                <div class="result result-14">
+                                                    <p class="output"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -535,37 +543,41 @@
                                             <div class="solution">
                                                 <form action="">
                                                     <div class="row">
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Write a number Ex. 5">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <select class="custom-select" name="" id="">
-                                                                    <option selected>Select one</option>
-                                                                    <option value="">+</option>
-                                                                    <option value="">-</option>
-                                                                    <option value="">×</option>
-                                                                    <option value="">/</option>
-                                                                    <option value="">%</option>
-                                                                    <option value="">^</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number"
-                                                                       class="form-control" name="" id="" placeholder="Write a number Ex. 5">
+                                                                       class="form-control" name="" id="simpleCalcInput1" placeholder="Write a number Ex. 5">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <button type="button" class="form-control btn btn-info">Print</button>
+                                                                <select class="custom-select" name="" id="simpleCalcOperator">
+                                                                    <option selected>Select one</option>
+                                                                    <option value="+">+</option>
+                                                                    <option value="-">-</option>
+                                                                    <option value="*">×</option>
+                                                                    <option value="/">/</option>
+                                                                    <option value="%">%</option>
+                                                                    <option value="^">^</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input type="number"
+                                                                       class="form-control" name="" id="simpleCalcInput2" placeholder="Write a number Ex. 5">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <button type="button" id="calcBtn" class="form-control btn btn-info">Calc</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
 
-                                                <div class="result">
-                                                    <p class="output">5</p>
+                                                <div class="result result-15">
+                                                    <p class="output"></p>
                                                 </div>
                                             </div>
                                         </div>
