@@ -40,10 +40,9 @@
     04. Large devices (desktops, 992px and up)
         - Theme slider CSS
         - Theme pricing CSS
-        - Theme contact-us CSS
 
     05. Extra large devices (large desktops, 1200px and up)
-        - Theme contact-us CSS
+
 -----------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------
@@ -158,7 +157,12 @@
         display: none;
     }
 
+    .testimonials .carousel-inner .comment-body {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 
+    
     /* ========== pricing ========== */
     .pricing .feature {
         transform: scale(1, 1);
@@ -170,8 +174,8 @@
         width: 100%;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
     }
 }
 
@@ -271,6 +275,11 @@
 
 
     /* ========== testimonials ========== */
+    .testimonials .carousel-inner .comment-body {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
     .testimonials .carousel-control-next, .testimonials .carousel-control-prev {
         display: none;
     }
@@ -287,8 +296,8 @@
         width: 100%;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
     }
 }
 
@@ -386,16 +395,12 @@
 
 
     /* ========== contact-us ========== */
-    .contact-us .container-fluid {
-        padding: 0 15px;
-    }
-
     .contact-us .contact {
         width: 100%;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
     }
 }
 
@@ -403,12 +408,6 @@
     04.  Large devices (desktops, 992px and up)
 -----------------------------------------------------------*/
 @media all and (min-width: 992px) and (max-width: 1199.98px) {
-
-    /* ========== contact-us ========== */
-    .contact-us .container-fluid {
-        padding: 0;
-    }
-
 
     /* ========== slider ========== */
     .slider figure {
@@ -427,8 +426,4 @@
 -----------------------------------------------------------*/
 @media all and (min-width: 1200px) {
 
-    /* ========== contact-us ========== */
-    .contact-us .container-fluid {
-        padding: 0;
-    }
 }
