@@ -23,7 +23,7 @@
  * @type {{init: main.init, _: main._}}
  */
 const main = {
-    init: () => {
+    init: function() {
         solution1.init();
         solution2.init();
         solution3.init();
@@ -151,11 +151,11 @@ const UICtr = {
  * @type {{init: solution1.init, getOutput: solution1.getOutput}}
  */
 const solution1 = {
-    init: () => {
-        solution1.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q1.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this = e.currentTarget;
@@ -179,11 +179,11 @@ const solution1 = {
  * @type {{init: solution2.init, getOutput: solution2.getOutput}}
  */
 const solution2 = {
-    init: () => {
-        solution2.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q2.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this = e.currentTarget;
@@ -212,11 +212,11 @@ const solution2 = {
  * @type {{init: solution3.init, getOutput: solution3.getOutput}}
  */
 const solution3 = {
-    init: () => {
-        solution3.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q3.btn.addEventListener('click', function (e) {
             e.preventDefault();
             let firstInput  = UICtr.q3.input1.value,
@@ -240,11 +240,11 @@ const solution3 = {
  * @type {{init: solution4.init, getOutput: solution4.getOutput}}
  */
 const solution4 = {
-    init: () => {
-        solution4.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q4.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this = e.currentTarget;
@@ -275,11 +275,11 @@ const solution4 = {
  * @type {{init: solution5.init, getOutput: solution5.getOutput}}
  */
 const solution5 = {
-    init: () => {
-        solution5.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q5.btn.addEventListener('click', function (e) {
             e.preventDefault();
             let firstInput  = UICtr.q5.input1.value,
@@ -307,11 +307,11 @@ const solution5 = {
  * @type {{init: solution6.init, getOutput: solution6.getOutput}}
  */
 const solution6 = {
-    init: () => {
-        solution6.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q6.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this = e.currentTarget;
@@ -340,11 +340,11 @@ const solution6 = {
  * @type {{init: solution7.init, getOutput: solution7.getOutput}}
  */
 const solution7 = {
-    init: () => {
-        solution7.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q7.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this  = e.currentTarget,
@@ -374,11 +374,11 @@ const solution7 = {
  * @type {{init: solution8.init, getOutput: solution8.getOutput}}
  */
 const solution8 = {
-    init: () => {
-        solution8.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q8.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this     = e.currentTarget,
@@ -418,14 +418,15 @@ const solution8 = {
  * @example Input: 5
  * @return Output: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
  *
- * @type {{init: solution9.init, getOutput(): void}}
+ * @type {{init: solution9.init, getOutput: solution9.getOutput}}
  */
+
 const solution9 = {
-    init: () => {
-        solution9.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q9.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this   = e.currentTarget,
@@ -456,11 +457,11 @@ const solution9 = {
  * @type {{init: solution10.init, getOutput(): void}}
  */
 const solution10 = {
-    init: () => {
-        solution10.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q10.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this     = e.currentTarget,
@@ -508,11 +509,11 @@ const solution10 = {
  * @type {{init: solution11.init, getOutput(): void}}
  */
 const solution11 = {
-    init: () => {
-        solution11.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q11.btn.addEventListener('click', function (e) {
             e.preventDefault();
             let firstInput  = UICtr.q11.input1.value,
@@ -537,11 +538,11 @@ const solution11 = {
  * @type {{init: solution12.init, calcAvg: solution12.calcAvg, calcPerc: (function(*=, *=): string), getOutput: solution12.getOutput}}
  */
 const solution12 = {
-    init: () => {
-        solution12.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q12.btn.addEventListener('click', function (e) {
             e.preventDefault();
             let firstInput  = Number(UICtr.q12.input1.value),
@@ -551,17 +552,17 @@ const solution12 = {
                 fifthInput  = Number(UICtr.q12.input5.value);
 
             if (Number(firstInput) < 0 || Number(secondInput) < 0 || Number(thirdInput) < 0 || Number(fourthInput) < 0 || Number(fifthInput) < 0) {
-                solution12.resetVal();
+                this.resetVal();
                 return;
             }
             if (Number(firstInput) > 100 || Number(secondInput) > 100 || Number(thirdInput) > 100 || Number(fourthInput) > 100 || Number(fifthInput) > 100) {
-                solution12.resetVal();
+                this.resetVal();
                 return;
             }
 
             let total = firstInput + secondInput + thirdInput + fourthInput + fifthInput,
-                avg   = solution12.calcAvg([firstInput, secondInput, thirdInput, fourthInput, fifthInput]),
-                perc  = solution12.calcPerc(total);
+                avg   = this.calcAvg([firstInput, secondInput, thirdInput, fourthInput, fifthInput]),
+                perc  = this.calcPerc(total);
 
             UICtr.q12.solution.total.innerHTML = total;
             UICtr.q12.solution.avg.innerHTML = avg;
@@ -584,7 +585,7 @@ const solution12 = {
         return (sub * 100) / total + '%';
     },
 
-    resetVal: () => {
+    resetVal: function() {
         UICtr.q12.solution.total.innerHTML = '';
         UICtr.q12.solution.avg.innerHTML = '';
         UICtr.q12.solution.perc.innerHTML = '';
@@ -601,21 +602,21 @@ const solution12 = {
  * @type {{init: solution13.init, getDays: (function(*): number), getOutput: solution13.getOutput}}
  */
 const solution13 = {
-    init: () => {
-        solution13.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q13.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this = e.currentTarget;
 
-            if (Number($this.value) <= 0 || Number($this.value) > 12 || solution13.getDays(Number($this.value)) === 0) {
+            if (Number($this.value) <= 0 || Number($this.value) > 12 || this.getDays(Number($this.value)) === 0) {
                 UICtr.q13.solution.innerHTML = '';
                 return;
             }
 
-            UICtr.q13.solution.innerHTML = `Number of days for this month is <strong>${solution13.getDays(Number($this.value))}</strong>`;
+            UICtr.q13.solution.innerHTML = `Number of days for this month is <strong>${this.getDays(Number($this.value))}</strong>`;
         });
     },
 
@@ -648,11 +649,11 @@ const solution13 = {
  * @type {{init: solution14.init}}
  */
 const solution14 = {
-    init: () => {
-        solution14.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q14.btn.addEventListener('click', function (e) {
             e.preventDefault();
             let firstInput  = Number(UICtr.q14.input1.value),
@@ -671,7 +672,7 @@ const solution14 = {
             }
 
             let total = firstInput + secondInput + thirdInput + fourthInput + fifthInput,
-                grade = solution14.getGrade(total);
+                grade = this.getGrade(total);
 
             UICtr.q14.solution.innerHTML = `Your grade is <strong>${grade}</strong>`;
 
@@ -683,7 +684,7 @@ const solution14 = {
     },
 
     getGrade: (sub) => {
-        let perc  = solution14.calcPerc(sub),
+        let perc  = this.calcPerc(sub),
             grade = '';
 
         if (perc >= 90) {
@@ -713,11 +714,11 @@ const solution14 = {
  * @type {{init: solution15.init, calc: (function(*=, *=, *=): number), getOutput: solution15.getOutput}}
  */
 const solution15 = {
-    init: () => {
-        solution15.getOutput();
+    init: function() {
+        this.getOutput();
     },
 
-    getOutput: () => {
+    getOutput: function() {
         UICtr.q15.btn.addEventListener('click', function (e) {
             e.preventDefault();
             let firstInput  = Number(UICtr.q15.input1.value),
@@ -730,7 +731,7 @@ const solution15 = {
                 return;
             }
 
-            UICtr.q15.solution.innerHTML = `Your result is: <strong>${solution15.calc(firstInput, secondInput, operator)}</strong>`;
+            UICtr.q15.solution.innerHTML = `Your result is: <strong>${this.calc(firstInput, secondInput, operator)}</strong>`;
         });
     },
 
@@ -763,6 +764,6 @@ const solution15 = {
     }
 };
 
-window.onload = () => {
+window.onload = function() {
     main.init();
 };

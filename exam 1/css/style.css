@@ -1,0 +1,589 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name:  Exam 1 - Main Style File
+    Template URI:   https://bezel-exam.netlify.app/?fbclid=IwAR0PByCi_9M99jpyO-BvyL7dFJC1m5kyqSW-HNce0N8k27psp8OqSISb2aY
+    Description:    Bezel | Creative Multi-Purpose HTML Template
+    Version:        1.0
+    Author:         Mustafa Shaaban
+    Instructor:     Ahmed Bahnasy
+    Mentor:         Ahmed Abdulmuty
+    Section:        Saturday - 4PM : 10PM
+    Cycle:          33
+
+
+    ===================
+    CSS INDEX
+    ===================
+    00. Theme defaults CSS
+        - Globals
+        - Typography
+        - Scroll
+        - Buttons
+    01. Theme main-nav CSS
+    02. Theme slider CSS
+    03. Theme about CSS
+    04. Theme team CSS
+    05. Theme services CSS
+    06. Theme pricing CSS
+    07. Theme testimonials CSS
+    08. Theme contact-us CSS
+
+-----------------------------------------------------------------------------------*/
+
+/*----------------------------------------
+    00.  Theme defaults CSS
+----------------------------------------*/
+/* ========== Globals ========== */
+.vh-100 {
+    height: 100vh;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.py-6 {
+    padding: 110px 0;
+}
+
+/* ========== Typography ========== */
+.text-premium {
+    color: #00c3da !important;
+}
+
+h1, h2, h3, h4, h6 {
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 6.25rem;
+}
+
+h2 {
+    font-size: 2.375rem;
+    color: #1f1f1f;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h6 {
+    font-weight: 500;
+    font-size: 0.813rem;
+    letter-spacing: 0.05em;
+    color: #1f1f1f;
+}
+
+.section-title h4 {
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #787878;
+    margin: .7rem auto;
+}
+
+.section-title h2,
+.section-title-left h2 {
+    position: relative;
+}
+
+.section-title h2:before,
+.section-title-left h2:before {
+    z-index: 1;
+    content: attr(data-gross);
+    font-size: 2em;
+    opacity: .06;
+    position: absolute;
+    top: -0.5em;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+}
+
+.section-title h2:before {
+    left: 50%;
+}
+
+.section-title-left h2:before {
+    left: .35em;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #787878;
+    line-height: 1.5;
+}
+
+/* ========== Scroll ========== */
+html {scroll-behavior: smooth;}
+
+body::-webkit-scrollbar {width: 5px;}
+
+body::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);}
+
+body::-webkit-scrollbar-thumb {background-color: #00c3da; border-radius: 5px;}
+
+
+/* ========== Buttons ========== */
+.btn {
+    padding: 0 30px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all .3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-light-gray {
+    background-color: #f7f7f7;
+}
+
+.bg-gray {
+    background-color: #1f1f1f;
+    opacity: .7;
+}
+
+.btn-default-dark {
+    background-color: transparent;
+    border-color: #dedede;
+    color: #1f1f1f;
+    border-radius: 0;
+    font-size: 11px;
+}
+
+.btn-default-dark:hover {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.btn-default-white {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+}
+
+.btn-default-white:hover {
+    background-color: #fff;
+    color: #1f1f1f;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: #00c3da;
+}
+
+.btn-custom:hover {
+    background-color: #00d5ee;
+    transform: translateY(-1px);
+}
+
+/*----------------------------------------
+    01.  Theme main-nav  CSS
+----------------------------------------*/
+.main-nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+.main-nav .navbar {
+    padding: 0;
+}
+
+.main-nav .navbar .navbar-nav:first-of-type {
+    padding-right: 10px;
+}
+
+.main-nav .navbar .navbar-nav:last-of-type {
+    padding-left: 10px;
+}
+
+.main-nav .navbar .navbar-brand {
+    width: 80px;
+}
+
+.main-nav .navbar .navbar-nav:last-of-type {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-nav .navbar .nav-link {
+    color: #fff !important;
+    padding: 30px 15px !important;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: all .3s ease;
+    line-height: 20px;
+}
+
+/*----------------------------------------
+    02.  Theme slider CSS
+----------------------------------------*/
+.slider .carousel-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 31, 31, 0.55);
+}
+
+.slider .carousel-item-1 {
+    background: url("../img/bg-image-28.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.slider .carousel-item-2 {
+    background: url("../img/bg-image-29.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.slider .carousel-caption {
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translate(-50%, -50%);
+}
+
+.slider .indicators {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider .indicators .carousel-control-next, .slider .indicators .carousel-control-prev {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: 0;
+    line-height: 50px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all .3s ease;
+    opacity: 1;
+}
+
+.slider .indicators .carousel-control-next i, .slider .indicators .carousel-control-prev i {
+    position: static;
+    z-index: 50;
+}
+
+.slider .indicators .carousel-control-next:after, .slider .indicators .carousel-control-prev:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 0;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 0;
+}
+
+.slider .indicators .carousel-control-next:hover, .slider .indicators .carousel-control-prev:hover {
+    color: #1f1f1f;
+    border-color: #fff;
+}
+
+.slider .indicators .carousel-control-next:hover:after, .slider .indicators .carousel-control-prev:hover:after {
+    width: 100%;
+}
+
+/*----------------------------------------
+    03.  Theme about CSS
+----------------------------------------*/
+.about header h6 {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.about .content {
+    width: 66%;
+}
+
+.about .content p {
+    font-size: 21px;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.about .content p span {
+    font-weight: 400;
+}
+
+/*----------------------------------------
+    04.  Theme team CSS
+----------------------------------------*/
+.team .team-id {
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.team .team-id:hover .info-layer {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.team .info-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 195, 218, 0.9);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transform: translateY(10%);
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+.team .info-layer ul {
+    padding: 20px;
+}
+
+.team .info-layer ul li a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.team .info-layer ul li a:hover {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+}
+
+.team .info-layer .info {
+    padding: 20px;
+}
+
+.team .info-layer .info h4 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.team .info-layer .info span {
+    display: block;
+    font-size: 12px;
+}
+
+/*----------------------------------------
+    05.  Theme services CSS
+----------------------------------------*/
+.services {
+}
+
+.services .service i {
+    font-size: 3rem;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.services .service h5 {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.services .desc p {
+    font-size: 15px;
+}
+
+.services ul li {
+    padding: 6px 0;
+}
+
+/*----------------------------------------
+    06.  Theme pricing CSS
+----------------------------------------*/
+.pricing .card {
+    border: 1px solid #f3f3f3;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+    transition: all .3s ease;
+    border-radius: 0;
+}
+
+.pricing .card .card-body {
+    padding: 45px 35px;
+    position: relative;
+}
+
+.pricing .card .card-body .price-type .card-title {
+    font-size: 13px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.pricing .card .card-body .price {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing .card .card-body .price h2 {
+    font-size: 55px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.pricing .card .card-body .price span {
+    font-size: 18px;
+    font-weight: 400;
+    vertical-align: top;
+}
+
+.pricing .feature {
+    transform: scale(1.08);
+}
+
+.pricing .feature h2 {
+    color: #00c3da;
+}
+
+.pricing .feature .badge {
+    position: absolute;
+    top: 40px;
+    right: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    background-color: #00c3da;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 15px;
+    line-height: 1.2;
+}
+
+.pricing ul li {
+    padding: 8px 0;
+}
+
+.pricing .btn {
+    padding: 0 16px;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+}
+
+/*----------------------------------------
+    07.  Theme testimonials CSS
+----------------------------------------*/
+.testimonials .carousel-inner {
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    max-width: 750px;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 10px;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.testimonials .carousel-inner .carousel-item {
+    /*padding: 75px 100px;*/
+    padding: 50px 100px;
+}
+
+.testimonials .carousel-inner .carousel-item .avatar {
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*width: 100px;*/
+    /*border-radius: 50%;*/
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+}
+
+.testimonials .carousel-control-next,
+.testimonials .carousel-control-prev {
+    width: auto;
+    height: 50px;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 1.5rem;transition: all .3s ease;
+}
+
+.testimonials .carousel-control-next:hover {
+    color: #00c3da !important;
+    transform: translate(10px, -50%);
+}
+
+.testimonials .carousel-control-prev:hover {
+    color: #00c3da !important;
+    transform: translate(-10px, -50%);
+}
+
+.testimonials .carousel-indicators {
+    bottom: 0;
+    transform: translateY(70px);
+}
+
+.testimonials .carousel-indicators li {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+}
+
+.testimonials .carousel-indicators li.active {
+    background-color: #00c3da;
+}
+
+/*----------------------------------------
+    08.  Theme contact-us CSS
+----------------------------------------*/
+
+.contact-us .contact {
+    width: 58%;
+}
+
+.contact-us .h2 {
+    font-size: 38px;
+    letter-spacing: -1px;
+}
+
+.contact-us h4 {
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #787878;
+}
+
+.contact-us form label {
+    color: #1f1f1f;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.contact-us form .form-control {
+    height: 50px;
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 50px;
+    border: 2px solid #eee;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.contact-us form textarea.form-control {
+    height: auto;
+}
