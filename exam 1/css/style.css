@@ -493,16 +493,20 @@ body::-webkit-scrollbar-thumb {background-color: #00c3da; border-radius: 5px;}
 }
 
 .testimonials .carousel-inner .carousel-item {
-    padding: 75px 100px;
+    /*padding: 75px 100px;*/
+    padding: 50px 100px;
 }
 
 .testimonials .carousel-inner .carousel-item .avatar {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*width: 100px;*/
+    /*border-radius: 50%;*/
     width: 100px;
     border-radius: 50%;
+    margin: 0 auto 25px;
 }
 
 .testimonials .carousel-control-next,
