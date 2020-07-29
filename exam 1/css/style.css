@@ -34,10 +34,6 @@
     00.  Theme defaults CSS
 ----------------------------------------*/
 /* ========== Globals ========== */
-.container {
-    max-width: 1170px;
-}
-
 .vh-100 {
     height: 100vh;
 }
@@ -536,9 +532,6 @@ body::-webkit-scrollbar-thumb {background-color: #00c3da; border-radius: 5px;}
 /*----------------------------------------
     08.  Theme contact-us CSS
 ----------------------------------------*/
-.contact-us .container-fluid {
-    padding: 0;
-}
 
 .contact-us .contact {
     width: 58%;

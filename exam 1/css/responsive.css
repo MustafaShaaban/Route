@@ -39,16 +39,225 @@
     01.  Extra small devices (portrait phones, less than 576px)
 -----------------------------------------------------------*/
 @media all and (max-width: 575.98px) {
+    .btn {
+        padding: 0 20px;
+        height: 40px;
+        line-height: 35px;
+    }
+
+    .main-nav {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .main-nav .container {
+        padding: 0 15px;
+    }
+
+    .main-nav .navbar {
+        background-color: #fff !important;
+        height: 60px;
+        box-shadow: 5px 5px 15px 0 rgba(31, 31, 31, 0.07);
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-nav .navbar .light {
+        visibility: hidden !important;
+        display: none;
+    }
+
+    .main-nav .navbar .dark {
+        visibility: visible !important;
+    }
+
+    .main-nav .navbar .menu-btn {
+        position: relative;
+    }
+
+    .main-nav .navbar .menu-btn:before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        height: 60px;
+        width: 1px;
+        background-color: #eee;
+    }
+
+    .main-nav .navbar-collapse {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        background-color: #fff;
+    }
+
+    .main-nav .navbar-collapse .nav-link {
+        color: #000 !important;
+        padding: 15px !important;
+    }
+
+    .main-nav .navbar .menu-btn i {
+        color: #000;
+    }
+
+    .main-nav .navbar-nav:last-of-type {
+        display: none;
+    }
 
 
+
+    .slider .indicators {
+        display: none;
+    }
+    .slider figure {
+        width: 100%;
+    }
+    .slider figcaption h1 {
+        font-size: 3rem;
+    }
+
+    .slider figcaption h4 {
+        font-size: 1rem;
+    }
+
+
+    .services .section-title-left h2:before {
+        left: 50%;
+    }
+    .services header, .services p  {
+        text-align: center;
+    }
+
+
+    .testimonials .carousel-control-next, .testimonials .carousel-control-prev {
+        display: none;
+    }
+
+
+    .pricing .feature{
+        transform: scale(1,1);
+    }
+
+
+    .contact-us .contact {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
 }
 
 /*-----------------------------------------------------------
     02.  Small devices (landscape phones, 576px and up)
 -----------------------------------------------------------*/
 @media all and (min-width: 576px) and (max-width: 767.98px) {
+    .main-nav {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .main-nav .navbar {
+        background-color: #fff !important;
+        height: 60px;
+        box-shadow: 5px 5px 15px 0 rgba(31, 31, 31, 0.07);
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-nav .navbar .light {
+        visibility: hidden !important;
+        display: none;
+    }
+
+    .main-nav .navbar .dark {
+        visibility: visible !important;
+    }
+
+    .main-nav .navbar .menu-btn {
+        position: relative;
+    }
+
+    .main-nav .navbar .menu-btn:before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        height: 60px;
+        width: 1px;
+        background-color: #eee;
+    }
+
+    .main-nav .navbar-collapse {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        background-color: #fff;
+    }
+
+    .main-nav .navbar-collapse .nav-link {
+        color: #000 !important;
+        padding: 15px !important;
+    }
+
+    .main-nav .navbar .menu-btn i {
+        color: #000;
+    }
+
+    .main-nav .navbar-nav:last-of-type {
+        display: none;
+    }
 
 
+    .slider .indicators {
+        display: none;
+    }
+    .slider figure {
+        width: 100%;
+    }
+    .slider figcaption h1 {
+        font-size: 3rem;
+    }
+
+    .slider figcaption h4 {
+        font-size: 1rem;
+    }
+
+
+    .services .section-title-left h2:before {
+        left: 50%;
+    }
+    .services header, .services p  {
+        text-align: center;
+    }
+
+
+    .testimonials .carousel-control-next, .testimonials .carousel-control-prev {
+        display: none;
+    }
+
+
+    .pricing .feature{
+        transform: scale(1,1);
+    }
+
+
+    .contact-us .contact {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
 }
 
 /*-----------------------------------------------------------
@@ -56,19 +265,122 @@
 -----------------------------------------------------------*/
 @media all and (min-width: 768px) and (max-width: 991.98px) {
 
+    .main-nav {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 
+    .main-nav .navbar {
+        background-color: #fff !important;
+        height: 60px;
+        box-shadow: 5px 5px 15px 0 rgba(31, 31, 31, 0.07);
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-nav .navbar .light {
+        visibility: hidden !important;
+        display: none;
+    }
+
+    .main-nav .navbar .dark {
+        visibility: visible !important;
+    }
+
+    .main-nav .navbar .menu-btn {
+        position: relative;
+    }
+
+    .main-nav .navbar .menu-btn:before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        height: 60px;
+        width: 1px;
+        background-color: #eee;
+    }
+
+    .main-nav .navbar-collapse {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        background-color: #fff;
+    }
+
+    .main-nav .navbar-collapse .nav-link {
+        color: #000 !important;
+        padding: 15px !important;
+    }
+
+    .main-nav .navbar .menu-btn i {
+        color: #000;
+    }
+
+    .main-nav .navbar-nav:last-of-type {
+        display: none;
+    }
+
+
+    .slider figure {
+        width: 100%;
+    }
+    .slider figcaption h1 {
+        font-size: 4rem;
+    }
+
+    .slider figcaption h4 {
+        font-size: 1rem;
+    }
+
+
+    .pricing .feature{
+        transform: scale(1,1);
+    }
+
+
+    .testimonials .carousel-control-next, .testimonials .carousel-control-prev {
+        display: none;
+    }
+
+
+    .contact-us .container-fluid {
+        padding: 0 15px;
+    }
+    .contact-us .contact {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
 }
 
 /*-----------------------------------------------------------
     04.  Large devices (desktops, 992px and up)
 -----------------------------------------------------------*/
 @media all and (min-width: 992px) and (max-width: 1199.98px) {
+    .contact-us .container-fluid {
+        padding: 0;
+    }
+    .slider figure {
+        width: 100%;
+    }
 
+    .pricing .feature{
+        transform: scale(1,1);
+    }
 }
 
 /*-----------------------------------------------------------
     05.  Extra large devices (large desktops, 1200px and up)
 -----------------------------------------------------------*/
 @media all and (min-width: 1200px) {
-
+    .contact-us .container-fluid {
+        padding: 0;
+    }
 }
