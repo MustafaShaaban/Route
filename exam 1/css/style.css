@@ -15,6 +15,7 @@
     CSS INDEX
     ===================
     00. Theme defaults CSS
+        - Globals
         - Typography
         - Scroll
         - Buttons
@@ -32,12 +33,7 @@
 /*----------------------------------------
     00.  Theme defaults CSS
 ----------------------------------------*/
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #787878;
-    line-height: 1.5;
-}
-
+/* ========== Globals ========== */
 .container {
     max-width: 1170px;
 }
@@ -54,60 +50,7 @@ body {
     padding: 110px 0;
 }
 
-.btn {
-    padding: 0 30px;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all .3s ease;
-    font-family: 'Poppins', sans-serif;
-}
-
-.bg-light-gray {
-    background-color: #f7f7f7;
-}
-
-.bg-gray {
-    background-color: #1f1f1f;
-    opacity: .7;
-}
-
-.btn-default-dark {
-    background-color: transparent;
-    border-color: #dedede;
-    color: #1f1f1f;
-    border-radius: 0;
-    font-size: 11px;
-}
-
-.btn-default-dark:hover {
-    background-color: #1f1f1f;
-    color: #fff;
-}
-
-.btn-default-white {
-    color: #fff;
-    border-color: #fff;
-    background-color: transparent;
-}
-
-.btn-default-white:hover {
-    background-color: #fff;
-    color: #1f1f1f;
-}
-
-.btn-custom {
-    color: #fff;
-    background-color: #00c3da;
-}
-
-.btn-custom:hover {
-    background-color: #00d5ee;
-    transform: translateY(-1px);
-}
-
+/* ========== Typography ========== */
 .text-premium {
     color: #00c3da !important;
 }
@@ -168,6 +111,78 @@ h6 {
 
 .section-title-left h2:before {
     left: .35em;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #787878;
+    line-height: 1.5;
+}
+
+/* ========== Scroll ========== */
+html {scroll-behavior: smooth;}
+
+body::-webkit-scrollbar {width: 5px;}
+
+body::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);}
+
+body::-webkit-scrollbar-thumb {background-color: #00c3da; border-radius: 5px;}
+
+
+
+/* ========== Buttons ========== */
+.btn {
+    padding: 0 30px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all .3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-light-gray {
+    background-color: #f7f7f7;
+}
+
+.bg-gray {
+    background-color: #1f1f1f;
+    opacity: .7;
+}
+
+.btn-default-dark {
+    background-color: transparent;
+    border-color: #dedede;
+    color: #1f1f1f;
+    border-radius: 0;
+    font-size: 11px;
+}
+
+.btn-default-dark:hover {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.btn-default-white {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+}
+
+.btn-default-white:hover {
+    background-color: #fff;
+    color: #1f1f1f;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: #00c3da;
+}
+
+.btn-custom:hover {
+    background-color: #00d5ee;
+    transform: translateY(-1px);
 }
 
 /*----------------------------------------
@@ -498,11 +513,26 @@ h6 {
     color: #00c3da !important;
     transform: translate(10px, -50%);
 }
+
 .testimonials .carousel-control-prev:hover {
     color: #00c3da !important;
     transform: translate(-10px, -50%);
 }
 
+.testimonials .carousel-indicators {
+    bottom: 0;
+    transform: translateY(70px);
+}
+.testimonials .carousel-indicators li {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+}
+.testimonials .carousel-indicators li.active {
+    background-color: #00c3da;
+}
 /*----------------------------------------
     08.  Theme contact-us CSS
 ----------------------------------------*/
