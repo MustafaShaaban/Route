@@ -14,37 +14,52 @@
     CSS INDEX
     ===================
     01. Extra small devices (portrait phones, less than 576px)
+        - Theme defaults CSS
         - Theme main-nav CSS
-        - Theme about CSS
+        - Theme slider CSS
+        - Theme services CSS
+        - Theme pricing CSS
         - Theme testimonials CSS
         - Theme contact-us CSS
 
     02. Small devices (landscape phones, 576px and up)
         - Theme main-nav CSS
-        - Theme about CSS
+        - Theme slider CSS
+        - Theme services CSS
+        - Theme pricing CSS
         - Theme testimonials CSS
         - Theme contact-us CSS
 
     03. Medium devices (tablets, 768px and up)
         - Theme main-nav CSS
-        - Theme about CSS
+        - Theme slider CSS
+        - Theme pricing CSS
         - Theme testimonials CSS
+        - Theme contact-us CSS
 
     04. Large devices (desktops, 992px and up)
-    05. Extra large devices (large desktops, 1200px and up)
+        - Theme slider CSS
+        - Theme pricing CSS
+        - Theme contact-us CSS
 
+    05. Extra large devices (large desktops, 1200px and up)
+        - Theme contact-us CSS
 -----------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------
     01.  Extra small devices (portrait phones, less than 576px)
 -----------------------------------------------------------*/
 @media all and (max-width: 575.98px) {
+
+    /* ========== defaults ========== */
     .btn {
         padding: 0 20px;
         height: 40px;
         line-height: 35px;
     }
 
+
+    /* ========== main-nav ========== */
     .main-nav {
         position: fixed !important;
         top: 0;
@@ -110,13 +125,15 @@
     }
 
 
-
+    /* ========== slider ========== */
     .slider .indicators {
         display: none;
     }
+
     .slider figure {
         width: 100%;
     }
+
     .slider figcaption h1 {
         font-size: 3rem;
     }
@@ -126,24 +143,29 @@
     }
 
 
+    /* ========== services ========== */
     .services .section-title-left h2:before {
         left: 50%;
     }
-    .services header, .services p  {
+
+    .services header, .services p {
         text-align: center;
     }
 
 
+    /* ========== testimonials ========== */
     .testimonials .carousel-control-next, .testimonials .carousel-control-prev {
         display: none;
     }
 
 
-    .pricing .feature{
-        transform: scale(1,1);
+    /* ========== pricing ========== */
+    .pricing .feature {
+        transform: scale(1, 1);
     }
 
 
+    /* ========== contact-us ========== */
     .contact-us .contact {
         width: 100%;
         margin-left: 0 !important;
@@ -157,6 +179,8 @@
     02.  Small devices (landscape phones, 576px and up)
 -----------------------------------------------------------*/
 @media all and (min-width: 576px) and (max-width: 767.98px) {
+
+    /* ========== defaults ========== */
     .main-nav {
         position: fixed !important;
         top: 0;
@@ -218,12 +242,15 @@
     }
 
 
+    /* ========== slider ========== */
     .slider .indicators {
         display: none;
     }
+
     .slider figure {
         width: 100%;
     }
+
     .slider figcaption h1 {
         font-size: 3rem;
     }
@@ -233,24 +260,29 @@
     }
 
 
+    /* ========== services ========== */
     .services .section-title-left h2:before {
         left: 50%;
     }
-    .services header, .services p  {
+
+    .services header, .services p {
         text-align: center;
     }
 
 
+    /* ========== testimonials ========== */
     .testimonials .carousel-control-next, .testimonials .carousel-control-prev {
         display: none;
     }
 
 
-    .pricing .feature{
-        transform: scale(1,1);
+    /* ========== pricing ========== */
+    .pricing .feature {
+        transform: scale(1, 1);
     }
 
 
+    /* ========== contact-us ========== */
     .contact-us .contact {
         width: 100%;
         margin-left: 0 !important;
@@ -265,6 +297,7 @@
 -----------------------------------------------------------*/
 @media all and (min-width: 768px) and (max-width: 991.98px) {
 
+    /* ========== main-nav ========== */
     .main-nav {
         position: fixed !important;
         top: 0;
@@ -326,9 +359,11 @@
     }
 
 
+    /* ========== slider ========== */
     .slider figure {
         width: 100%;
     }
+
     .slider figcaption h1 {
         font-size: 4rem;
     }
@@ -338,19 +373,23 @@
     }
 
 
-    .pricing .feature{
-        transform: scale(1,1);
+    /* ========== pricing ========== */
+    .pricing .feature {
+        transform: scale(1, 1);
     }
 
 
+    /* ========== testimonials ========== */
     .testimonials .carousel-control-next, .testimonials .carousel-control-prev {
         display: none;
     }
 
 
+    /* ========== contact-us ========== */
     .contact-us .container-fluid {
         padding: 0 15px;
     }
+
     .contact-us .contact {
         width: 100%;
         margin-left: 0 !important;
@@ -364,15 +403,22 @@
     04.  Large devices (desktops, 992px and up)
 -----------------------------------------------------------*/
 @media all and (min-width: 992px) and (max-width: 1199.98px) {
+
+    /* ========== contact-us ========== */
     .contact-us .container-fluid {
         padding: 0;
     }
+
+
+    /* ========== slider ========== */
     .slider figure {
         width: 100%;
     }
 
-    .pricing .feature{
-        transform: scale(1,1);
+
+    /* ========== pricing ========== */
+    .pricing .feature {
+        transform: scale(1, 1);
     }
 }
 
@@ -380,6 +426,8 @@
     05.  Extra large devices (large desktops, 1200px and up)
 -----------------------------------------------------------*/
 @media all and (min-width: 1200px) {
+
+    /* ========== contact-us ========== */
     .contact-us .container-fluid {
         padding: 0;
     }

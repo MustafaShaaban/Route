@@ -125,7 +125,6 @@ body::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0
 body::-webkit-scrollbar-thumb {background-color: #00c3da; border-radius: 5px;}
 
 
-
 /* ========== Buttons ========== */
 .btn {
     padding: 0 30px;
@@ -222,6 +221,16 @@ body::-webkit-scrollbar-thumb {background-color: #00c3da; border-radius: 5px;}
 /*----------------------------------------
     02.  Theme slider CSS
 ----------------------------------------*/
+.slider .carousel-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 31, 31, 0.55);
+}
+
 .slider .carousel-item-1 {
     background: url("../img/bg-image-28.jpg") center no-repeat;
     background-size: cover;
@@ -519,6 +528,7 @@ body::-webkit-scrollbar-thumb {background-color: #00c3da; border-radius: 5px;}
     bottom: 0;
     transform: translateY(70px);
 }
+
 .testimonials .carousel-indicators li {
     width: 11px;
     height: 11px;
@@ -526,9 +536,11 @@ body::-webkit-scrollbar-thumb {background-color: #00c3da; border-radius: 5px;}
     background-color: rgba(0, 0, 0, 0.1);
     margin: 0 5px;
 }
+
 .testimonials .carousel-indicators li.active {
     background-color: #00c3da;
 }
+
 /*----------------------------------------
     08.  Theme contact-us CSS
 ----------------------------------------*/
