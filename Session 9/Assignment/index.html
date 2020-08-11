@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Session 9</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="bg-light py-5 position-relative">
+
+        <main class="front-page py-5 my-4">
+            <nav class="py-4 bg-dark text-light">
+                <div class="container-fluid">
+                    <h3>Bookmarker</h3>
+                </div>
+            </nav>
+
+            <div class="bookmarks">
+                <div class="container-fluid">
+                    <div class="bookmarks-form-container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="bookmark-form">
+                                    <form class="w-100" action="">
+                                        <div class="form-group">
+                                            <label for="site_name">Site Name</label>
+                                            <input type="text" name="site_name" id="site_name" class="form-control" placeholder="Bookmark Name"
+                                                   data-err="#site_name_err">
+                                            <div id="site_name_err" class="alert alert-danger d-none" role="alert">
+                                                <strong>danger</strong>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="site_url">Site URL</label>
+                                            <input type="url" name="site_url" id="site_url" class="form-control" placeholder="Website URL"
+                                                   data-err="#site_url_err">
+                                            <div id="site_url_err" class="alert alert-danger d-none" role="alert">
+                                                <strong>danger</strong>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" id="addBookmark" class="btn btn-primary btn-block" disabled >Add</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <header class="pt-4 pb-1">
+                                    <h3>Bookmark your favorite sites</h3>
+                                </header>
+                                <div class="alert alert-dark d-none" role="alert">
+                                    <strong>Bookmark is empty!.</strong>
+                                </div>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="">Site name</th>
+                                            <th class="">Controllers</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBody">
+                                        <tr>
+                                            <td>Google</td>
+                                            <td>
+                                                <div class="controllers">
+                                                    <a href="javascript:" class="btn btn-info visitBtn">Visit</a>
+                                                    <a href="javascript:" class="btn btn-warning editBtn">Edit</a>
+                                                    <a href="javascript:" class="btn btn-danger removeBtn">Remove</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Google</td>
+                                            <td>
+                                                <div class="controllers">
+                                                    <a href="javascript:" class="btn btn-info">Visit</a>
+                                                    <a href="javascript:" class="btn btn-warning">Edit</a>
+                                                    <a href="javascript:" class="btn btn-danger">Remove</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-dark text-light text-center py-4">
+                <div class="container">
+                    <p class="m-0">© 2019 Bookmarker Inc.</p>
+                </div>
+            </footer>
+        </main>
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
