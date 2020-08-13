@@ -10,6 +10,7 @@
     <body class="bg-light py-5 position-relative">
 
         <main class="front-page py-5 my-4">
+
             <nav class="py-4 bg-dark text-light">
                 <div class="container-fluid">
                     <h3>Bookmarker</h3>
@@ -26,21 +27,22 @@
                                         <div class="form-group">
                                             <label for="site_name">Site Name</label>
                                             <input type="text" name="site_name" id="site_name" class="form-control" placeholder="Bookmark Name"
-                                                   data-err="#site_name_err">
+                                                   data-err="#site_name_err" autocomplete="off" required>
                                             <div id="site_name_err" class="alert alert-danger d-none" role="alert">
-                                                <strong>danger</strong>
+                                                <strong>This field can't be empty!</strong>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="site_url">Site URL</label>
                                             <input type="url" name="site_url" id="site_url" class="form-control" placeholder="Website URL"
-                                                   data-err="#site_url_err">
+                                                   data-err="#site_url_err" autocomplete="off" required>
                                             <div id="site_url_err" class="alert alert-danger d-none" role="alert">
-                                                <strong>danger</strong>
+                                                <strong>This field can't be empty!</strong>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <button type="button" id="addBookmark" class="btn btn-primary btn-block" disabled >Add</button>
+                                            <button type="button" id="editBookmark" class="btn btn-primary btn-block hidden" >Edit</button>
                                         </div>
                                     </form>
                                 </div>
@@ -73,11 +75,13 @@
                     <p class="m-0">© 2019 Bookmarker Inc.</p>
                 </div>
             </footer>
+
         </main>
 
         <script src="js/jquery-3.5.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/functions.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

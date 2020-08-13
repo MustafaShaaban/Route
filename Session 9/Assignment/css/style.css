@@ -28,3 +28,6 @@ table thead tr th:last-of-type {
 .controllers a {
     min-width: 75px;
 }
+.hidden {
+    display: none;
+}
