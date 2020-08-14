@@ -31,3 +31,11 @@ table thead tr th:last-of-type {
 .hidden {
     display: none;
 }
+
+.alert-input {
+    background-color: transparent;
+    border: none;
+    padding: 0 10px;
+    font-size: .8rem;
+    color: #da3b4a;
+}

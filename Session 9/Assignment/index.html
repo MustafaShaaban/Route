@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Session 9</title>
+        <title>Bookmarker</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/all.min.css">
@@ -11,12 +11,15 @@
 
         <main class="front-page py-5 my-4">
 
+            <!-- Start of header -->
             <nav class="py-4 bg-dark text-light">
                 <div class="container-fluid">
                     <h3>Bookmarker</h3>
                 </div>
             </nav>
+            <!-- End of header -->
 
+            <!-- Start of bookmarks -->
             <div class="bookmarks">
                 <div class="container-fluid">
                     <div class="bookmarks-form-container">
@@ -28,7 +31,7 @@
                                             <label for="site_name">Site Name</label>
                                             <input type="text" name="site_name" id="site_name" class="form-control" placeholder="Bookmark Name"
                                                    data-err="#site_name_err" autocomplete="off" required>
-                                            <div id="site_name_err" class="alert alert-danger d-none" role="alert">
+                                            <div id="site_name_err" class="alert alert-input hidden" role="alert">
                                                 <strong>This field can't be empty!</strong>
                                             </div>
                                         </div>
@@ -36,13 +39,16 @@
                                             <label for="site_url">Site URL</label>
                                             <input type="url" name="site_url" id="site_url" class="form-control" placeholder="Website URL"
                                                    data-err="#site_url_err" autocomplete="off" required>
-                                            <div id="site_url_err" class="alert alert-danger d-none" role="alert">
+                                            <div id="site_url_err" class="alert alert-input hidden" role="alert">
                                                 <strong>This field can't be empty!</strong>
+                                            </div>
+                                            <div id="site_url_exists" class="alert alert-input hidden" role="alert">
+                                                <strong>This url is already exists!</strong>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <button type="button" id="addBookmark" class="btn btn-primary btn-block" disabled >Add</button>
-                                            <button type="button" id="editBookmark" class="btn btn-primary btn-block hidden" >Edit</button>
+                                            <button type="button" id="addBookmark" class="btn btn-primary btn-block" disabled>Add</button>
+                                            <button type="button" id="editBookmark" class="btn btn-primary btn-block hidden">Edit</button>
                                         </div>
                                     </form>
                                 </div>
@@ -51,9 +57,6 @@
                                 <header class="pt-4 pb-1">
                                     <h3>Bookmark your favorite sites</h3>
                                 </header>
-                                <div class="alert alert-dark d-none" role="alert">
-                                    <strong>Bookmark is empty!.</strong>
-                                </div>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -64,17 +67,23 @@
                                     <tbody id="tableBody">
                                     </tbody>
                                 </table>
+                                <div class="alert alert-dark empty-alert hidden" role="alert">
+                                    <strong>Bookmark is empty!.</strong>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- End of bookmarks -->
 
+            <!-- Start of footer -->
             <footer class="bg-dark text-light text-center py-4">
                 <div class="container">
                     <p class="m-0">© 2019 Bookmarker Inc.</p>
                 </div>
             </footer>
+            <!-- End of footer -->
 
         </main>
 

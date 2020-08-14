@@ -1,3 +1,33 @@
+/** -----------------------------------------------------------------------------------
+ *
+ *   Package Name: Session 9 Assignment 7 - Main Script File
+ *   Version: 2.0
+ *   Author: Mustafa Shaaban
+ *
+ *   TODO:: fix the url checking when updating records, it returns an error because url is already assigned to the record itself.
+ *   TODO:: validate the url to be a valid url format.
+ *   TODO:: Complete the file documenting.
+ *
+ *
+ *   OBJECTS INDEX
+ *   ===================
+ *   01. DB
+ *      The object responsible for manage the DB operations
+ *
+ *   02. view
+ *      This object responsible for managing the app view
+ *
+ *   03. CRUD
+ *      This object responsible for managing the crud operations add/edit/delete
+ *      by firing events which calls DB methods directly
+ *
+ *   04. validation
+ *      This object responsible for validate inputs on keyUp
+ *      if inputs are empty and if url is already exists before in the local storage
+ *
+ *
+ ----------------------------------------------------------------------------------*/
+
 (function () {
 
     window.onload = function () {
@@ -5,60 +35,106 @@
         view.updateView();
     };
 
-    let siteName    = _('#site_name'),
-        siteUrl     = _('#site_url'),
-        submitBtn   = _('#addBookmark'),
-        siteNameErr = _('#site_name_err'),
-        siteUrlErr  = _('#site_url_err');
+    let siteName = _('#site_name'),
+        siteUrl  = _('#site_url'),
+        tblBody  = _('#tableBody');
 
-    let tblBody   = _('#tableBody'),
-        visitBtn  = _all('.visitBtn'),
-        editBtn   = _all('.editBtn'),
-        deleteBtn = _all('.removeBtn');
-
+    /**
+     * The object responsible for manage the DB operations
+     *
+     * @type {{initDB: initDB, getAll: (function(): any),
+     * get: (function(*): *), insert: insert, update: update,
+     * isExist: (function(*): boolean), delete: delete}}
+     */
     const DB = {
+        /**
+         * create localstorage
+         */
         initDB: function () {
             if (localStorage.getItem('bookmarks') === null) {
                 localStorage.setItem('bookmarks', JSON.stringify([]));
             }
         },
 
+        /**
+         * get specific bookmark by id
+         *
+         * @param id the bookmark id
+         * @return {*}
+         */
         get: function (id) {
             let data = this.getAll();
             return data[id];
         },
 
+        /**
+         * get all bookmarks and parse it
+         *
+         * @return {any}
+         */
         getAll: function () {
             return JSON.parse(localStorage.getItem('bookmarks'));
         },
 
-        isExist: function () {
-
+        /**
+         * This method responsible for checking the url if exists
+         *
+         * @param url
+         * @return {boolean} true if exists
+         */
+        isExist: function (url) {
+            let exists = this.getAll().filter((bookmark) => {
+                return bookmark.url === url.trim();
+            });
+            return exists.length > 0;
         },
 
+        /**
+         * the method responsible for inserting the new records to localstorage
+         *
+         * @param bookmarkObj
+         */
         insert: function (bookmarkObj) {
             let data = this.getAll();
             data.push(bookmarkObj);
             localStorage.setItem('bookmarks', JSON.stringify(data));
         },
 
+        /**
+         * the method responsible for updating the localstorage records
+         *
+         * @param bookmarkObj
+         */
         update: function (bookmarkObj) {
             let data = this.getAll();
             data[bookmarkObj.id] = bookmarkObj;
             localStorage.setItem('bookmarks', JSON.stringify(data));
         },
 
+        /**
+         * the method responsible for deleting records from localstorage.
+         *
+         * @param id
+         */
         delete: function (id) {
             let data = this.getAll();
             data.splice(id, 1);
             localStorage.setItem('bookmarks', JSON.stringify(data));
+            restForm();
         }
     };
 
+    /**
+     * This object responsible for managing the app view
+     *
+     * @type {{init: init, visitBtn: visitBtn, updateView: updateView, createRow: (function(*): string), editBtn: editBtn}}
+     */
     const view = {
         init: function () {
+            CRUD.init();
             this.visitBtn();
             this.editBtn();
+            validation.init();
         },
 
         createRow: function (data) {
@@ -80,17 +156,21 @@
         updateView: function () {
             let template = '',
                 all      = DB.getAll();
+
             for (let i = 0; i < all.length; i++) {
                 let bookmarkObj = {
                     id: i,
                     status: all[i].status,
-                    name: all[i].name,
-                    url: all[i].url
+                    name: all[i].name.trim(),
+                    url: all[i].url.trim()
                 };
                 template += this.createRow(bookmarkObj);
             }
+
             tblBody.innerHTML = template;
-            CRUD.init();
+
+            _('.empty-alert').style.display = (all.length > 0) ? 'none' : 'block';
+
             this.init();
         },
 
@@ -122,6 +202,12 @@
         }
     };
 
+    /**
+     * This object responsible for managing the crud operations add/edit/delete
+     * by firing events which calls DB methods directly
+     *
+     * @type {{add: add, init: init, edit: edit, delete: delete}}
+     */
     const CRUD = {
         init: function () {
             this.add();
@@ -132,11 +218,11 @@
         add: function () {
             _('#addBookmark').addEventListener('click', function (e) {
                 e.preventDefault();
-                if (siteName.value !== '' && siteUrl.value !== '') {
+                if (siteName.value.trim() !== '' && siteUrl.value.trim() !== '') {
                     let bookmarkObj = {
                         status: 'publish',
-                        name: siteName.value,
-                        url: siteUrl.value
+                        name: siteName.value.trim(),
+                        url: siteUrl.value.trim()
                     };
                     DB.insert(bookmarkObj);
                     view.updateView();
@@ -149,15 +235,15 @@
         edit: function () {
             _('#editBookmark').addEventListener('click', function (e) {
                 e.preventDefault();
-                if (siteName.value !== '' && siteUrl.value !== '') {
-                    let $this = e.currentTarget,
+                if (siteName.value.trim() !== '' && siteUrl.value.trim() !== '') {
+                    let $this      = e.currentTarget,
                         bookmarkID = $this.getAttribute('data-id');
 
                     let bookmarkObj = {
                         id: bookmarkID,
                         status: 'modified',
-                        name: siteName.value,
-                        url: siteUrl.value
+                        name: siteName.value.trim(),
+                        url: siteUrl.value.trim()
                     };
 
                     DB.update(bookmarkObj);
@@ -182,26 +268,56 @@
 
     };
 
+    /**
+     * This object responsible for validate inputs on keyUp
+     * if inputs are empty and if url is already exists before in the local storage
+     *
+     * @type {{init: init, validateUrl: validateUrl, inputsKeyUp: inputsKeyUp, validateEmptyInp: validateEmptyInp}}
+     */
+    const validation = {
+        init: function () {
+            this.inputsKeyUp();
+        },
 
-    siteName.addEventListener('keyup', validateEmptyInp);
+        inputsKeyUp: function () {
+            siteName.addEventListener('keyup', this.validateEmptyInp);
 
-    siteUrl.addEventListener('keyup', validateEmptyInp);
+            siteUrl.addEventListener('keyup', this.validateEmptyInp);
 
+            siteUrl.addEventListener('keyup', this.validateUrl);
+        },
 
-    function validateEmptyInp(e) {
-        e.preventDefault();
-        let $this     = e.currentTarget,
-            errAreaID = $this.getAttribute("data-err");
+        validateEmptyInp: function (e) {
+            e.preventDefault();
+            let $this     = e.currentTarget,
+                errAreaID = $this.getAttribute("data-err");
 
-        if ($this.value === '') {
-            _(errAreaID).style.cssText = 'display: block !important';
-        } else {
-            _(errAreaID).style.cssText = 'display: none !important';
+            if ($this.value.trim() === '') {
+                _(errAreaID).style.display = 'block';
+            } else {
+                _(errAreaID).style.display = 'none';
+            }
+
+            _('#addBookmark').disabled = siteName.value.trim() === '' || siteUrl.value.trim() === '';
+
+            _('#editBookmark').disabled = siteName.value.trim() === '' || siteUrl.value.trim() === '';
+        },
+
+        validateUrl: function (e) {
+            let $this = e.currentTarget;
+
+            if (DB.isExist($this.value)) {
+                _('#site_url_exists').style.display = 'block';
+                _('#addBookmark').disabled = true;
+                _('#editBookmark').disabled = true;
+            } else {
+                _('#site_url_exists').style.display = 'none';
+                _('#addBookmark').disabled = false;
+                _('#editBookmark').disabled = false;
+            }
+
         }
-
-        _('#addBookmark').disabled = siteName.value === '' || siteUrl.value === '';
-        _('#editBookmark').disabled = siteName.value === '' || siteUrl.value === '';
-    }
+    };
 
 
 })();
