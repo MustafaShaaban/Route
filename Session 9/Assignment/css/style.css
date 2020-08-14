@@ -1,0 +1,41 @@
+body {
+    min-height: 100vh;
+}
+
+nav, footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+nav {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+table thead tr th:first-of-type {
+    width: 70%;
+}
+
+table thead tr th:last-of-type {
+    width: 30%;
+}
+
+
+.controllers a {
+    min-width: 75px;
+}
+.hidden {
+    display: none;
+}
+
+.alert-input {
+    background-color: transparent;
+    border: none;
+    padding: 0 10px;
+    font-size: .8rem;
+    color: #da3b4a;
+}
