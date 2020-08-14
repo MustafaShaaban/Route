@@ -40,7 +40,7 @@ const main = {
         solution14.init();
         solution15.init();
     },
-    _: (el) => {
+    _: function(el) {
         let elements = document.querySelector(el);
         if (typeof elements !== 'undefined' && null !== elements) {
             return elements;
@@ -543,6 +543,7 @@ const solution12 = {
     },
 
     getOutput: function() {
+        let that = this;
         UICtr.q12.btn.addEventListener('click', function (e) {
             e.preventDefault();
             let firstInput  = Number(UICtr.q12.input1.value),
@@ -552,17 +553,17 @@ const solution12 = {
                 fifthInput  = Number(UICtr.q12.input5.value);
 
             if (Number(firstInput) < 0 || Number(secondInput) < 0 || Number(thirdInput) < 0 || Number(fourthInput) < 0 || Number(fifthInput) < 0) {
-                this.resetVal();
+                that.resetVal();
                 return;
             }
             if (Number(firstInput) > 100 || Number(secondInput) > 100 || Number(thirdInput) > 100 || Number(fourthInput) > 100 || Number(fifthInput) > 100) {
-                this.resetVal();
+                that.resetVal();
                 return;
             }
 
             let total = firstInput + secondInput + thirdInput + fourthInput + fifthInput,
-                avg   = this.calcAvg([firstInput, secondInput, thirdInput, fourthInput, fifthInput]),
-                perc  = this.calcPerc(total);
+                avg   = that.calcAvg([firstInput, secondInput, thirdInput, fourthInput, fifthInput]),
+                perc  = that.calcPerc(total);
 
             UICtr.q12.solution.total.innerHTML = total;
             UICtr.q12.solution.avg.innerHTML = avg;
@@ -571,7 +572,7 @@ const solution12 = {
         });
     },
 
-    calcAvg: (numbers = []) => {
+    calcAvg: function(numbers = []) {
         if (numbers.length > 1) {
             let sub = 0;
             for (let i = 0; i <= numbers.length - 1; i++) {
@@ -581,7 +582,7 @@ const solution12 = {
         }
     },
 
-    calcPerc: (sub = 0, total = 500) => {
+    calcPerc: function(sub = 0, total = 500) {
         return (sub * 100) / total + '%';
     },
 
@@ -607,20 +608,21 @@ const solution13 = {
     },
 
     getOutput: function() {
+        let that = this;
         UICtr.q13.input.addEventListener('keyup', function (e) {
             e.preventDefault();
             let $this = e.currentTarget;
 
-            if (Number($this.value) <= 0 || Number($this.value) > 12 || this.getDays(Number($this.value)) === 0) {
+            if (Number($this.value) <= 0 || Number($this.value) > 12 || that.getDays(Number($this.value)) === 0) {
                 UICtr.q13.solution.innerHTML = '';
                 return;
             }
 
-            UICtr.q13.solution.innerHTML = `Number of days for this month is <strong>${this.getDays(Number($this.value))}</strong>`;
+            UICtr.q13.solution.innerHTML = `Number of days for this month is <strong>${that.getDays(Number($this.value))}</strong>`;
         });
     },
 
-    getDays: (month) => {
+    getDays: function(month) {
         let days;
 
         if (month === 4 || month === 6 || month === 9 || month === 11) {
@@ -654,6 +656,7 @@ const solution14 = {
     },
 
     getOutput: function() {
+        let that = this;
         UICtr.q14.btn.addEventListener('click', function (e) {
             e.preventDefault();
             let firstInput  = Number(UICtr.q14.input1.value),
@@ -672,18 +675,18 @@ const solution14 = {
             }
 
             let total = firstInput + secondInput + thirdInput + fourthInput + fifthInput,
-                grade = this.getGrade(total);
+                grade = that.getGrade(total);
 
             UICtr.q14.solution.innerHTML = `Your grade is <strong>${grade}</strong>`;
 
         });
     },
 
-    calcPerc: (sub = 0, total = 500) => {
+    calcPerc: function(sub = 0, total = 500) {
         return (sub * 100) / total;
     },
 
-    getGrade: (sub) => {
+    getGrade: function(sub) {
         let perc  = this.calcPerc(sub),
             grade = '';
 
@@ -719,6 +722,7 @@ const solution15 = {
     },
 
     getOutput: function() {
+        let that = this;
         UICtr.q15.btn.addEventListener('click', function (e) {
             e.preventDefault();
             let firstInput  = Number(UICtr.q15.input1.value),
@@ -731,11 +735,11 @@ const solution15 = {
                 return;
             }
 
-            UICtr.q15.solution.innerHTML = `Your result is: <strong>${this.calc(firstInput, secondInput, operator)}</strong>`;
+            UICtr.q15.solution.innerHTML = `Your result is: <strong>${that.calc(firstInput, secondInput, operator)}</strong>`;
         });
     },
 
-    calc: (firstInput, secondInput, operator = '+') => {
+    calc: function(firstInput, secondInput, operator = '+') {
         let result = 0;
         switch (operator) {
             case '+':
