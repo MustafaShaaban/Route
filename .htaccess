@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^.well-known\/acme-challenge\/ - [L]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+<ifModule mod_headers.c>
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+</IfModule>
